@@ -86,28 +86,22 @@ other types of metals and chemistry for reagents).
 		blueprints += null
 
 /obj/item/disk/design_disk/proc/randomize()
-	// pick a techweb node at random
-	var/static/list/invalid_nodes = list(/datum/techweb_node/base)
-	var/random_node_type = pick(subtypesof(/datum/techweb_node) - invalid_nodes)
-	var/datum/techweb_node/random_node = new random_node_type
+	// iterate over all designs
+	var/list/available_designs = list()
+	for(var/path in subtypesof(/datum/design))
+		var/datum/design/DN = new path
+		// add all non-autholathe designs
+		if(DN && !(DN.build_type & AUTOLATHE))
+			available_designs += DN.id
 
-	// name the disk after the node
-	if(random_node && random_node.design_ids.len)
-		name = "Mysterious [random_node.display_name] Component Design Disk"
+	// shuffle list (randomize)
+	shuffle_inplace(available_designs)
 
-		var/number_of_designs_to_write = 0
-		// bounds check
-		if(random_node.design_ids.len < max_blueprints)
-			number_of_designs_to_write = random_node.design_ids.len
-		else
-			number_of_designs_to_write = max_blueprints
+	ASSERT(available_designs.len >= max_blueprints)
 
-		// shuffle list (randomize)
-		shuffle_inplace(random_node.design_ids)
-
-		// write designs to disk
-		for(var/i in 1 to number_of_designs_to_write)
-			blueprints[i] = random_node.design_ids[i]
+	// write designs to disk
+	for(var/i in 1 to max_blueprints)
+		blueprints[i] = available_designs[i]
 
 /obj/item/disk/design_disk/adv
 	name = "Advanced Component Design Disk"
