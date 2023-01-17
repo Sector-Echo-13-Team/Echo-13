@@ -85,6 +85,30 @@ other types of metals and chemistry for reagents).
 	for(var/i in 1 to max_blueprints)
 		blueprints += null
 
+/obj/item/disk/design_disk/proc/randomize()
+	// pick a techweb node at random
+	var/static/list/invalid_nodes = list(/datum/techweb_node/base)
+	var/random_node_type = pick(subtypesof(/datum/techweb_node) - invalid_nodes)
+	var/datum/techweb_node/random_node = new random_node_type
+
+	// name the disk after the node
+	if(random_node && random_node.design_ids.len)
+		name = "Mysterious [random_node.display_name] Component Design Disk"
+
+		var/number_of_designs_to_write = 0
+		// bounds check
+		if(random_node.design_ids.len < max_blueprints)
+			number_of_designs_to_write = random_node.design_ids.len
+		else
+			number_of_designs_to_write = max_blueprints
+
+		// shuffle list (randomize)
+		shuffle_inplace(random_node.design_ids)
+
+		// write designs to disk
+		for(var/i in 1 to number_of_designs_to_write)
+			blueprints[i] = random_node.design_ids[i]
+
 /obj/item/disk/design_disk/adv
 	name = "Advanced Component Design Disk"
 	color = "#bed876"
@@ -105,6 +129,18 @@ other types of metals and chemistry for reagents).
 	desc = "A disk for storing device design data for construction in lathes. This one has absurd amounts of extra storage space."
 	custom_materials = list(/datum/material/iron =300, /datum/material/glass = 100, /datum/material/silver = 100, /datum/material/gold = 100, /datum/material/bluespace = 50)
 	max_blueprints = 10
+
+/obj/item/disk/design_disk/random
+	name = "Mysterious Component Design Disk"
+	color = "#3c5c91"
+	desc = "A disk for storing device design data for construction in lathes. This one's contents could be anything."
+	custom_materials = list(/datum/material/iron =300, /datum/material/glass = 100, /datum/material/silver = 50)
+	max_blueprints = 3
+
+/obj/item/disk/design_disk/random/Initialize()
+	. = ..()
+	randomize()
+
 
 //Disks with content
 /obj/item/disk/design_disk/ammo_38_hunting
