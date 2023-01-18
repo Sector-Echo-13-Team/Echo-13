@@ -90,8 +90,8 @@ other types of metals and chemistry for reagents).
 	var/list/available_designs = list()
 	for(var/path in subtypesof(/datum/design))
 		var/datum/design/DN = new path
-		// add all non-autholathe designs
-		if(DN && !(DN.build_type & AUTOLATHE))
+		// add all imprinter, protolathe, and machfab designs
+		if(DN && DN.id != DESIGN_ID_IGNORE && ((DN.build_type & IMPRINTER) || (DN.build_type & PROTOLATHE) || (DN.build_type & MECHFAB)))
 			available_designs += DN.id
 
 	// shuffle list (randomize)
@@ -129,7 +129,7 @@ other types of metals and chemistry for reagents).
 	color = "#3c5c91"
 	desc = "A disk for storing device design data for construction in lathes. This one's contents could be anything."
 	custom_materials = list(/datum/material/iron =300, /datum/material/glass = 100, /datum/material/silver = 50)
-	max_blueprints = 3
+	max_blueprints = 5
 
 /obj/item/disk/design_disk/random/Initialize()
 	. = ..()
