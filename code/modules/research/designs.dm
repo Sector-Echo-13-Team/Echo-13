@@ -86,13 +86,12 @@ other types of metals and chemistry for reagents).
 		blueprints += null
 
 /obj/item/disk/design_disk/proc/randomize()
-	// iterate over all designs
 	var/list/available_designs = list()
-	for(var/path in subtypesof(/datum/design))
-		var/datum/design/DN = new path
-		// add all imprinter, protolathe, and machfab designs
-		if(DN && DN.id != DESIGN_ID_IGNORE && ((DN.build_type & IMPRINTER) || (DN.build_type & PROTOLATHE) || (DN.build_type & MECHFAB)))
-			available_designs += DN.id
+	// iterate over all designs
+	for(var/design_id in SSresearch.techweb_designs)
+		var/datum/design/found_design = SSresearch.techweb_design_by_id(design_id)
+		if((found_design.build_type & IMPRINTER) || (found_design.build_type & PROTOLATHE) || (found_design.build_type & MECHFAB))
+			available_designs += found_design
 
 	// shuffle list (randomize)
 	shuffle_inplace(available_designs)
