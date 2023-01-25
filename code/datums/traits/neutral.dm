@@ -236,32 +236,40 @@
 	species_lock = TRAIT_SPECIES_BLACKLIST(SPECIES_IPC, SPECIES_JELLYPERSON, SPECIES_PLASMAMAN, SPECIES_ETHEREAL, SPECIES_VAMPIRE) //No.
 	mob_traits = list(TRAIT_NOBREATH, TRAIT_NOHUNGER)
 	var/old_blood
-	var/datum/action/vampire_quirk_drain/VA
-	var/datum/action/vampire_quirk_transfer/VD
+	var/obj/item/organ/heart/old_heart
+	var/datum/action/vampire_quirk_drain/vampire_drain
+	var/datum/action/vampire_quirk_transfer/vampire_transfer
 	var/list/old_traits
 	var/list/old_biotypes
+	var/list/species_traits = list(NOHEART, DRINKSBLOOD)
 
 /datum/quirk/vampire/add()
 	var/mob/living/carbon/human/H = quirk_holder
-	VA = new
-	VD = new
-	VA.Grant(H)
-	VD.Grant(H)
+	var/obj/item/organ/heart/current_heart = H.getorganslot(ORGAN_SLOT_HEART)
+	old_heart = current_heart.type
+	vampire_drain = new
+	vampire_transfer = new
+	vampire_drain.Grant(H)
+	vampire_transfer.Grant(H)
 	old_blood = H.dna.blood_type
 	H.dna.species.exotic_blood = /datum/reagent/blood/true_draculine
-	H.dna.species.species_traits |= list(DRINKSBLOOD)
+	H.dna.species.species_traits |= species_traits
 	H.dna.species.inherent_biotypes = MOB_UNDEAD|MOB_HUMANOID
+	current_heart.qdel_self()
 
 /datum/quirk/vampire/remove()
 	if(quirk_holder)
 		var/mob/living/carbon/human/H = quirk_holder
-		if(VA)
-			VA.Remove(H)
-		if(VD)
-			VD.Remove(H)
+		if(vampire_drain)
+			vampire_drain.Remove(H)
+		if(vampire_transfer)
+			vampire_transfer.Remove(H)
 		H.dna.species.exotic_blood = ""
 		H.dna.blood_type = old_blood
-		H.dna.species.species_traits ^= list(DRINKSBLOOD)
+		if(!H.getorganslot(ORGAN_SLOT_HEART))
+			old_heart = new
+			old_heart.Insert(H)
+		H.dna.species.species_traits ^= species_traits
 		H.dna.species.inherent_biotypes = old_biotypes
 
 /datum/quirk/vampire/on_process()
@@ -272,10 +280,17 @@
 		C.adjustOxyLoss(-2)
 		C.adjustCloneLoss(-2)
 		return
-	C.blood_volume -= 0.235
+	C.blood_volume -= 0.2
+	if(C.blood_volume <= BLOOD_VOLUME_BAD)
+		if(prob(5) && C.blood_volume > BLOOD_VOLUME_SURVIVE)
+			to_chat(C, "<span class='danger'>You're running out of blood!</span>")
+		var/obj/item/organ/heart/heart = C.getorganslot(ORGAN_SLOT_HEART)
+		if(!heart || heart.type != /obj/item/organ/heart/cursed)
+			C.blood_volume -= 0.5
 	if(C.blood_volume <= BLOOD_VOLUME_SURVIVE)
 		to_chat(C, "<span class='danger'>You ran out of blood!</span>")
-		C.dust()
+		C.death()
+		C.Drain()
 
 #define VAMP_DRAIN_AMOUNT 50
 
@@ -291,7 +306,6 @@
 	if(iscarbon(owner))
 		var/mob/living/carbon/H = owner
 		if(H.quirk_cooldown["Vampire"] >= world.time)
-			to_chat(H, "<span class='warning'>You just drained blood, wait a few seconds!</span>")
 			return
 		if(H.pulling && iscarbon(H.pulling) && H.grab_state == GRAB_PASSIVE)
 			var/mob/living/carbon/victim = H.pulling
@@ -327,7 +341,7 @@
 
 #undef VAMP_DRAIN_AMOUNT
 
-#define VAMP_TRANSFER_AMOUNT 10
+#define VAMP_TRANSFER_AMOUNT 5
 
 /datum/action/vampire_quirk_transfer
 	name = "Blood Transfer"
@@ -341,7 +355,6 @@
 	if(iscarbon(owner))
 		var/mob/living/carbon/H = owner
 		if(H.quirk_cooldown["Vampire Transfer"] >= world.time)
-			to_chat(H, "<span class='warning'>You just transfered blood, wait a few seconds!</span>")
 			return
 		if(H.pulling && iscarbon(H.pulling) && H.grab_state == GRAB_PASSIVE)
 			var/mob/living/carbon/victim = H.pulling
@@ -356,7 +369,7 @@
 				return
 			H.quirk_cooldown["Vampire Transfer"] = world.time + 20
 			if(victim.anti_magic_check(FALSE, TRUE, FALSE, 0))
-				to_chat(victim, "<span class='warning'>[H] tries to surround twist you, but stops before touching you!</span>")
+				to_chat(victim, "<span class='warning'>[H] tries to twist you, but stops before touching you!</span>")
 				to_chat(H, "<span class='warning'>[victim] is blessed! You stop just in time to avoid catching fire.</span>")
 				return
 			if(victim?.reagents?.has_reagent(/datum/reagent/consumable/garlic))

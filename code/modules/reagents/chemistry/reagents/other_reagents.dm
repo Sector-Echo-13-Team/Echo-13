@@ -33,6 +33,7 @@
 /datum/reagent/blood/true_draculine
 	name = "True Draculine"
 	data = list("donor"=null,"viruses"=null,"blood_DNA"=null,"blood_type"="Draculine","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null,"quirks"=null)
+	color = "#850f2c"
 	description = "Slowly heals all damage types. Overdose will, after a short while, turn you into a vampire, addiction lowers your max health as your body attempts to fight off the corruption, if you're incompatible you're immune to the addiction and overdose will damage you instead."
 	metabolization_rate = 1
 	addiction_threshold = 20
