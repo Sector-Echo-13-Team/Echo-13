@@ -255,7 +255,6 @@
 	H.dna.species.exotic_blood = /datum/reagent/blood/true_draculine
 	H.dna.species.species_traits |= species_traits
 	H.dna.species.inherent_biotypes = MOB_UNDEAD|MOB_HUMANOID
-	current_heart.qdel_self()
 
 /datum/quirk/vampire/remove()
 	if(quirk_holder)
@@ -292,7 +291,7 @@
 		C.death()
 		C.Drain()
 
-#define VAMP_DRAIN_AMOUNT 50
+#define VAMP_DRAIN_AMOUNT 20
 
 /datum/action/vampire_quirk_drain
 	name = "Drain Victim"
@@ -307,28 +306,28 @@
 		var/mob/living/carbon/H = owner
 		if(H.quirk_cooldown["Vampire"] >= world.time)
 			return
-		if(H.pulling && iscarbon(H.pulling) && H.grab_state == GRAB_PASSIVE)
+		while(H.pulling && iscarbon(H.pulling) && H.grab_state == GRAB_PASSIVE)
 			var/mob/living/carbon/victim = H.pulling
 			if(H.blood_volume >= BLOOD_VOLUME_MAXIMUM)
 				to_chat(H, "<span class='warning'>You're already full!</span>")
-				return
+				break
 			if(victim.stat == DEAD)
 				to_chat(H, "<span class='warning'>You need a living victim!</span>")
-				return
+				break
 			if(!victim.blood_volume || (victim.dna && ((NOBLOOD in victim.dna.species.species_traits) || victim.dna.species.exotic_blood)))
 				to_chat(H, "<span class='warning'>[victim] doesn't have blood!</span>")
-				return
+				break
 			H.quirk_cooldown["Vampire"] = world.time + 30
 			if(victim.anti_magic_check(FALSE, TRUE, FALSE, 0))
 				to_chat(victim, "<span class='warning'>[H] tries to bite you, but stops before touching you!</span>")
 				to_chat(H, "<span class='warning'>[victim] is blessed! You stop just in time to avoid catching fire.</span>")
-				return
+				break
 			if(victim?.reagents?.has_reagent(/datum/reagent/consumable/garlic))
 				to_chat(victim, "<span class='warning'>[H] tries to bite you, but recoils in disgust!</span>")
 				to_chat(H, "<span class='warning'>[victim] reeks of garlic! you can't bring yourself to drain such tainted blood.</span>")
-				return
+				break
 			if(!do_after(H, 30, target = victim))
-				return
+				break
 			var/blood_volume_difference = BLOOD_VOLUME_MAXIMUM - H.blood_volume //How much capacity we have left to absorb blood
 			var/drained_blood = min(victim.blood_volume, VAMP_DRAIN_AMOUNT, blood_volume_difference)
 			to_chat(victim, "<span class='danger'>[H] is draining your blood!</span>")
