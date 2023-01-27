@@ -279,6 +279,8 @@
 		C.adjustOxyLoss(-2)
 		C.adjustCloneLoss(-2)
 		return
+	if(!C.client) //Can't blame no one for no disconnects
+		return
 	C.blood_volume -= 0.2
 	if(C.blood_volume <= BLOOD_VOLUME_BAD)
 		if(prob(5) && C.blood_volume > BLOOD_VOLUME_SURVIVE)
