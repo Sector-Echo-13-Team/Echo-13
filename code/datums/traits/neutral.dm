@@ -228,7 +228,7 @@
 
 /datum/quirk/vampire
 	name = "Vampirism"
-	desc = "You're a bloodsucking vampire, able to suck the blood of others, heal in coffins, transfer to them your own, and you're undead, do be careful not to run out of blood or give others too much of your own, lest peril come."
+	desc = "You're a bloodsucking vampire, able to suck the blood of others, heal in coffins, transfer to them your own, and you're undead, do be careful not to run out of blood or give others too much of your own, lest peril come. <b>This is not a license to grief.</b>"
 	value = 0
 	gain_text = "<span class='notice'>Your blood is accursed, feed on others lest you become dry and fall apart, however your blood is also helpful to others which are not vampires, and you may gift them, careful for them not to become like you.</span>"
 	lose_text = "<span class='notice'>You feel blessed, your blood no longer cursed.</span>"
@@ -255,6 +255,12 @@
 	H.dna.species.exotic_blood = /datum/reagent/blood/true_draculine
 	H.dna.species.species_traits |= species_traits
 	H.dna.species.inherent_biotypes = MOB_UNDEAD|MOB_HUMANOID
+
+/datum/quirk/vampire/post_add()
+	if(!quirk_holder.mind || quirk_holder.mind.special_role)
+		return
+	to_chat(quirk_holder, "<span class='big bold info'>Please note that your vampirism does NOT give you the right to attack people or otherwise cause any interference to \
+	the round without reason or escalation. You are not an antagonist, and the rules will treat you the same as other crewmembers.</span>")
 
 /datum/quirk/vampire/remove()
 	if(quirk_holder)
