@@ -400,6 +400,5 @@
 
 /mob/living/carbon/get_status_tab_items()
 	. = ..()
-	var/V = has_quirk(/datum/quirk/vampire)
-	if(V)
+	if(has_quirk(/datum/quirk/vampire))
 		. += "<span class='notice'>Current blood level: [blood_volume]/[BLOOD_VOLUME_MAXIMUM].</span>"
