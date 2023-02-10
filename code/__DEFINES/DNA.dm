@@ -136,6 +136,7 @@
 #define NOMOUTH 23
 #define NOSOCKS 24 // You cannot wear sock
 #define NO_BONES 25 //WS Edit - Breakable Bones
+#define NOHEART 26 //Heartless vampires!
 
 //organ slots
 #define ORGAN_SLOT_BRAIN "brain"
