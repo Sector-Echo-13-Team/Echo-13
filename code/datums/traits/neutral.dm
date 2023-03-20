@@ -282,18 +282,14 @@
 	if(istype(C.loc, /obj/structure/closet/crate/coffin))
 		C.heal_overall_damage(2,2,0, BODYPART_ORGANIC)
 		C.adjustToxLoss(-2)
-		C.adjustOxyLoss(-2)
 		C.adjustCloneLoss(-2)
 		return
 	if(!C.client) //Can't blame no one for no disconnects
 		return
-	C.blood_volume -= 0.2
+	C.blood_volume -= max(C.blood_volume/5000, 70)
 	if(C.blood_volume <= BLOOD_VOLUME_BAD)
 		if(prob(5) && C.blood_volume > BLOOD_VOLUME_SURVIVE)
 			to_chat(C, "<span class='danger'>You're running out of blood!</span>")
-		var/obj/item/organ/heart/heart = C.getorganslot(ORGAN_SLOT_HEART)
-		if(!heart || heart.type != /obj/item/organ/heart/cursed)
-			C.blood_volume -= 0.5
 	if(C.blood_volume <= BLOOD_VOLUME_SURVIVE)
 		to_chat(C, "<span class='danger'>You ran out of blood!</span>")
 		C.death()
