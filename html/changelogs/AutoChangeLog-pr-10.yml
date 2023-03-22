@@ -1,5 +1,0 @@
-author: Ms-Mee
-delete-after: true
-changes:
-  - balance: Changed the vampire bloodloss rate so vampires don't die so fast, removed
-      the cursed heart mechanic

@@ -70,3 +70,7 @@
   MrSamu99:
   - rscadd: Added ship description display to job select screen
   - bugfix: Fixes the ship description in ship purchase screen
+2023-03-22:
+  Ms-Mee:
+  - balance: Changed the vampire bloodloss rate so vampires don't die so fast, removed
+      the cursed heart mechanic
