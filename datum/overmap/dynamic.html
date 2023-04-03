@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;overmap&#x2F;dynamic - Sector Echo 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Sector Echo 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/overmap/dynamic.html#var">Var Details</a> - <a href="datum/overmap/dynamic.html#proc">Proc Details</a></header>
+<main>
+<h1>Dynamic Overmap Encounters <aside>/<a href="datum.html">datum</a>/<a href="datum/overmap.html">overmap</a>/<a href="datum/overmap/dynamic.html">dynamic</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L7">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 7"/></a></h1>
+
+<p>These overmap objects can be docked with and will create a dynamically generated area of many different types depending on the planet variable.
+When undocked with, it checks if there's anyone left on the planet, and if not, will move to another random location and wait to create a new encounter.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/default_baseturf">default_baseturf</a></th><td>The turf used as the backup baseturf for any reservations created by this datum. Should not be null.</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/force_encounter">force_encounter</a></th><td>The planet that will be forced to load</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/mapgen">mapgen</a></th><td>The mapgenerator itself. SHOULD NOT BE NULL if the datum ever creates an encounter</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/mapzone">mapzone</a></th><td>The active turf reservation, if there is one</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/planet">planet</a></th><td>What kind of planet the level is, if it's a planet at all.</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/planet_name">planet_name</a></th><td>Planet's flavor name, if it is a planet.</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/preserve_level">preserve_level</a></th><td>If the level should be preserved. Useful for if you want to build a colony or something.</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/probabilities">probabilities</a></th><td>List of probabilities for each type of planet.</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/reserve_docks">reserve_docks</a></th><td>The docking port in the reserve</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/ruin_list">ruin_list</a></th><td>List of ruins to potentially generate</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/ruin_turfs">ruin_turfs</a></th><td>list of ruins and their target turf, indexed by name</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/template">template</a></th><td>The preset ruin template to load, if/when it is loaded.</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/vlevel_height">vlevel_height</a></th><td>The Y bounds of the virtual z level</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/vlevel_width">vlevel_width</a></th><td>The X bounds of the virtual z level</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#var/weather_controller_type">weather_controller_type</a></th><td>The weather the virtual z will have. If null, the planet will have no weather.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#proc/choose_level_type">choose_level_type</a></th><td>Chooses a type of level for the dynamic level to use.</td></tr>
+            <tr><th><a href="datum/overmap/dynamic.html#proc/load_level">load_level</a></th><td>Load a level for a ship that's visiting the level.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/default_baseturf"><aside class="declaration">var </aside>default_baseturf
+            <aside>&ndash; /<a href="turf.html">turf</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L34">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 34"/></a></h3>
+        <p>The turf used as the backup baseturf for any reservations created by this datum. Should not be null.</p><h3 id="var/force_encounter"><aside class="declaration">var </aside>force_encounter
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 25"/></a></h3>
+        <p>The planet that will be forced to load</p><h3 id="var/mapgen"><aside class="declaration">var </aside>mapgen
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/map_generator.html">map_generator</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L32">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 32"/></a></h3>
+        <p>The mapgenerator itself. SHOULD NOT BE NULL if the datum ever creates an encounter</p><h3 id="var/mapzone"><aside class="declaration">var </aside>mapzone
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/map_zone.html">map_zone</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 11"/></a></h3>
+        <p>The active turf reservation, if there is one</p><h3 id="var/planet"><aside class="declaration">var </aside>planet
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L19">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 19"/></a></h3>
+        <p>What kind of planet the level is, if it's a planet at all.</p><h3 id="var/planet_name"><aside class="declaration">var </aside>planet_name
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 21"/></a></h3>
+        <p>Planet's flavor name, if it is a planet.</p><h3 id="var/preserve_level"><aside class="declaration">var </aside>preserve_level
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L17">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 17"/></a></h3>
+        <p>If the level should be preserved. Useful for if you want to build a colony or something.</p><h3 id="var/probabilities"><aside class="declaration">var </aside>probabilities
+            <aside>&ndash; /static/list</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 23"/></a></h3>
+        <p>List of probabilities for each type of planet.</p><h3 id="var/reserve_docks"><aside class="declaration">var </aside>reserve_docks
+            <aside>&ndash; /list/obj/docking_port/stationary</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L15">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 15"/></a></h3>
+        <p>The docking port in the reserve</p><h3 id="var/ruin_list"><aside class="declaration">var </aside>ruin_list
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 27"/></a></h3>
+        <p>List of ruins to potentially generate</p><h3 id="var/ruin_turfs"><aside class="declaration">var </aside>ruin_turfs
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L29">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 29"/></a></h3>
+        <p>list of ruins and their target turf, indexed by name</p><h3 id="var/template"><aside class="declaration">var </aside>template
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/map_template.html">map_template</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 13"/></a></h3>
+        <p>The preset ruin template to load, if/when it is loaded.</p><h3 id="var/vlevel_height"><aside class="declaration">var </aside>vlevel_height
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L40">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 40"/></a></h3>
+        <p>The Y bounds of the virtual z level</p><h3 id="var/vlevel_width"><aside class="declaration">var </aside>vlevel_width
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L42">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 42"/></a></h3>
+        <p>The X bounds of the virtual z level</p><h3 id="var/weather_controller_type"><aside class="declaration">var </aside>weather_controller_type
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/weather_controller.html">weather_controller</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L37">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 37"/></a></h3>
+        <p>The weather the virtual z will have. If null, the planet will have no weather.</p><h2 id="proc">Proc Details</h2><h3 id="proc/choose_level_type"><aside class="declaration">proc </aside>choose_level_type<aside>(load_now) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L111">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 111"/></a></aside>
+        </h3>
+        <p>Chooses a type of level for the dynamic level to use.</p><h3 id="proc/load_level"><aside class="declaration">proc </aside>load_level<aside>() 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/objects/dynamic_datum.dm#L301">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;objects&#x2F;dynamic_datum.dm 301"/></a></aside>
+        </h3>
+        <p>Load a level for a ship that's visiting the level.</p>
+<ul>
+<li>visiting shuttle - The docking port of the shuttle visiting the level.</li>
+</ul></main>
+<footer>
+    shiptest.dme
+    <a href="https://github.com/Sector-Echo-13-Team/Echo-13/tree/a38b98b4569e16679edcf1c9c9ae13b070088f76">a38b98b</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

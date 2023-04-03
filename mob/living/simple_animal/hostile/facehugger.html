@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;facehugger - Sector Echo 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Sector Echo 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob/living/simple_animal/hostile/facehugger.html#var">Var Details</a> - <a href="mob/living/simple_animal/hostile/facehugger.html#proc">Proc Details</a></header>
+<main>
+<h1>Facehugger <aside>/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/simple_animal.html">simple_animal</a>/<a href="mob/living/simple_animal/hostile.html">hostile</a>/<a href="mob/living/simple_animal/hostile/facehugger.html">facehugger</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/special/facehugger.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;special&#x2F;facehugger.dm 12"/></a></h1>
+
+<p>A simplemob used by aliens to reproduce.  Will attempt to impregnate humans on its own, but can also be picked up and thrown for more efficiency.</p>
+<p>A small, crab-like creature which latches onto the faces of humans and monkeys and impregnates them with an alien embryo.  After a time, the embryo
+will explode the &quot;parent&quot; and an alien larva will be born.  Facehuggers can be deterred by using face-covering helmets or impossible to remove masks.
+They will generally bash against living and synthetic beings they cannot impregnate, eventually killing them.  Aliens can pick them up while alive and
+throw them, while humans or other handy creatures can only do so while they are dead.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob/living/simple_animal/hostile/facehugger.html#var/couple_retry_time">couple_retry_time</a></th><td>How long it takes between coupling attempts</td></tr>
+            <tr><th><a href="mob/living/simple_animal/hostile/facehugger.html#var/mask_facehugger">mask_facehugger</a></th><td>The mob's internal mask version, stored within the mob when the facehugger isn't being used as an item.</td></tr>
+            <tr><th><a href="mob/living/simple_animal/hostile/facehugger.html#var/pregnation_time">pregnation_time</a></th><td>How long it takes for a facehugger to impregnate a target once attached</td></tr>
+            <tr><th><a href="mob/living/simple_animal/hostile/facehugger.html#var/sterile">sterile</a></th><td>Whether or not this facehugger can actually impregnate targets</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob/living/simple_animal/hostile/facehugger.html#proc/BecomeItem">BecomeItem</a></th><td>Turns the facehugger into an item, storing the mob inside of it.</td></tr>
+            <tr><th><a href="mob/living/simple_animal/hostile/facehugger.html#proc/TryCoupling">TryCoupling</a></th><td>Attempts to have the facehugger couple with the given target.  Checks all possibilities and plays them out accordingly.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/couple_retry_time"><aside class="declaration">var </aside>couple_retry_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/special/facehugger.dm#L52">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;special&#x2F;facehugger.dm 52"/></a></h3>
+        <p>How long it takes between coupling attempts</p><h3 id="var/mask_facehugger"><aside class="declaration">var </aside>mask_facehugger
+            <aside>&ndash; /<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/clothing.html">clothing</a>/<a href="obj/item/clothing/mask/facehugger_item.html">mask/facehugger_item</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/special/facehugger.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;special&#x2F;facehugger.dm 54"/></a></h3>
+        <p>The mob's internal mask version, stored within the mob when the facehugger isn't being used as an item.</p><h3 id="var/pregnation_time"><aside class="declaration">var </aside>pregnation_time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/special/facehugger.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;special&#x2F;facehugger.dm 50"/></a></h3>
+        <p>How long it takes for a facehugger to impregnate a target once attached</p><h3 id="var/sterile"><aside class="declaration">var </aside>sterile
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/special/facehugger.dm#L48">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;special&#x2F;facehugger.dm 48"/></a></h3>
+        <p>Whether or not this facehugger can actually impregnate targets</p><h2 id="proc">Proc Details</h2><h3 id="proc/BecomeItem"><aside class="declaration">proc </aside>BecomeItem<aside>() 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/special/facehugger.dm#L145">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;special&#x2F;facehugger.dm 145"/></a></aside>
+        </h3>
+        <p>Turns the facehugger into an item, storing the mob inside of it.</p>
+<p>Proc to turn the facehugger into an item and store the mob inside said item.
+The item version will take the name, description, and appearance of the facehugger.</p><h3 id="proc/TryCoupling"><aside class="declaration">proc </aside>TryCoupling<aside>(/<a href="atom.html">atom</a>/target) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/special/facehugger.dm#L86">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;special&#x2F;facehugger.dm 86"/></a></aside>
+        </h3>
+        <p>Attempts to have the facehugger couple with the given target.  Checks all possibilities and plays them out accordingly.</p>
+<p>The proc which controls the facehugger's coupling power.  Checks a number of possibilities involving the target, and plays them out.
+Smashes against animals, aliens, and cyborgs not in the facehugger's faction.  If the facehugger isn't sterile, this will deal damage to the target.
+If the target has no head, it will also bash against them.
+If the target wears a helmet which covers their face, the coupling attempt will fail and no damage is dealt.
+If the target is not wearing a helmet but instead a removable mask which isn't a facehugger, the facehugger will rip it off.
+If the facehugger wasn't stopped anywhere in the previous conditions, it will become an item and attach itself to the target's face, assuming they can wear masks.
+Arguments:</p>
+<ul>
+<li>target - the atom which is being checked for coupling</li>
+</ul></main>
+<footer>
+    shiptest.dme
+    <a href="https://github.com/Sector-Echo-13-Team/Echo-13/tree/a38b98b4569e16679edcf1c9c9ae13b070088f76">a38b98b</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

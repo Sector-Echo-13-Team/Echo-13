@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;surgery_step - Sector Echo 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Sector Echo 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/surgery_step.html#var">Var Details</a></header>
+<main>
+<h1>surgery_step <aside>/<a href="datum.html">datum</a>/<a href="datum/surgery_step.html">surgery_step</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/accept_any_item">accept_any_item</a></th><td>Does the surgery step accept any item? If true, ignores implements. Compatible with require_hand.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/accept_hand">accept_hand</a></th><td>Does the surgery step require an open hand? If true, ignores implements. Compatible with accept_any_item.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/chems_needed">chems_needed</a></th><td>List of chems needed to complete the step. Even on success, the step will have no effect if there aren't the chems required in the mob. Use <em>require_all_chems</em> to specify if its any on the list or all on the list</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/experience_given">experience_given</a></th><td>The amount of experience given for successfully completing the step.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/failure_sound">failure_sound</a></th><td>Sound played if the step fails</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/implement_type">implement_type</a></th><td>The current type of implement used. This has to be stored, as the actual typepath of the tool may not match the list type.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/implements">implements</a></th><td>What tools can be used in this surgery, format is path = probability of success.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/preop_sound">preop_sound</a></th><td>Sound played when the step is started</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/repeatable">repeatable</a></th><td>Can this step be repeated? Make sure it isn't last step, or it used in surgery with <code>can_cancel = 1</code>. Or surgion will be stuck in the loop</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/require_all_chems">require_all_chems</a></th><td>If <em>chems_needed</em> requires all chems in the list or one chem in the list.</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/success_sound">success_sound</a></th><td>Sound played if the step succeeded</td></tr>
+            <tr><th><a href="datum/surgery_step.html#var/time">time</a></th><td>How long does the step take?</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/accept_any_item"><aside class="declaration">var </aside>accept_any_item
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 10"/></a></h3>
+        <p>Does the surgery step accept any item? If true, ignores implements. Compatible with require_hand.</p><h3 id="var/accept_hand"><aside class="declaration">var </aside>accept_hand
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L8">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 8"/></a></h3>
+        <p>Does the surgery step require an open hand? If true, ignores implements. Compatible with accept_any_item.</p><h3 id="var/chems_needed"><aside class="declaration">var </aside>chems_needed
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L16">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 16"/></a></h3>
+        <p>List of chems needed to complete the step. Even on success, the step will have no effect if there aren't the chems required in the mob. Use <em>require_all_chems</em> to specify if its any on the list or all on the list</p><h3 id="var/experience_given"><aside class="declaration">var </aside>experience_given
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L27">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 27"/></a></h3>
+        <p>The amount of experience given for successfully completing the step.</p><h3 id="var/failure_sound"><aside class="declaration">var </aside>failure_sound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 25"/></a></h3>
+        <p>Sound played if the step fails</p><h3 id="var/implement_type"><aside class="declaration">var </aside>implement_type
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 6"/></a></h3>
+        <p>The current type of implement used. This has to be stored, as the actual typepath of the tool may not match the list type.</p><h3 id="var/implements"><aside class="declaration">var </aside>implements
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L4">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 4"/></a></h3>
+        <p>What tools can be used in this surgery, format is path = probability of success.</p><h3 id="var/preop_sound"><aside class="declaration">var </aside>preop_sound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L21">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 21"/></a></h3>
+        <p>Sound played when the step is started</p><h3 id="var/repeatable"><aside class="declaration">var </aside>repeatable
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 14"/></a></h3>
+        <p>Can this step be repeated? Make sure it isn't last step, or it used in surgery with <code>can_cancel = 1</code>. Or surgion will be stuck in the loop</p><h3 id="var/require_all_chems"><aside class="declaration">var </aside>require_all_chems
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 18"/></a></h3>
+        <p>If <em>chems_needed</em> requires all chems in the list or one chem in the list.</p><h3 id="var/success_sound"><aside class="declaration">var </aside>success_sound
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 23"/></a></h3>
+        <p>Sound played if the step succeeded</p><h3 id="var/time"><aside class="declaration">var </aside>time
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/surgery/surgery_step.dm#L12">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;surgery&#x2F;surgery_step.dm 12"/></a></h3>
+        <p>How long does the step take?</p></main>
+<footer>
+    shiptest.dme
+    <a href="https://github.com/Sector-Echo-13-Team/Echo-13/tree/a38b98b4569e16679edcf1c9c9ae13b070088f76">a38b98b</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

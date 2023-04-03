@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;map_generator&#x2F;planet_generator - Sector Echo 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Sector Echo 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/map_generator/planet_generator.html#var">Var Details</a> - <a href="datum/map_generator/planet_generator.html#proc">Proc Details</a></header>
+<main>
+<h1>planet_generator <aside>/<a href="datum.html">datum</a>/<a href="datum/map_generator.html">map_generator</a>/<a href="datum/map_generator/planet_generator.html">planet_generator</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L4">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 4"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/biome_table">biome_table</a></th><td>Effectively a 2D array of biomes, organized by heat categories, then humidity.
+Note that the heat categories are NOT all equal-size.</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/birth_limit">birth_limit</a></th><td>If an open (dead) cell has greater than this many neighbors, it become closed (alive).</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/cave_area">cave_area</a></th><td>The area instance that will be used for all cave biomes.</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/cave_area_type">cave_area_type</a></th><td>The type of the area that will be used for all cave biomes.</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/cave_biome_table">cave_biome_table</a></th><td>A 2D array of &quot;cave&quot; biomes that generate at &quot;heights&quot; above the mountain_height variable.
+Like normal biomes, they are organized by heat, then humidity; however, they do NOT
+use the same heat categories as the normal biome table does.</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/death_limit">death_limit</a></th><td>If a closed (alive) cell has fewer than this many neighbors, it will become open (dead).</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/initial_closed_chance">initial_closed_chance</a></th><td>Chance for a cell in the cavegen cellular automaton to start closed</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/mountain_height">mountain_height</a></th><td>If a turf's perlin-calculated &quot;height&quot; is above this value, a cave biome will be used to generate it.
+For best results, avoid values around 0.5; basic perlin noise can create noticeable straight-line artifacts
+around the midpoint value. A value of 1 or greater disables caves entirely.</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/perlin_zoom">perlin_zoom</a></th><td>Higher values of this variable result in larger biomes.</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/primary_area">primary_area</a></th><td>The area instance that will be used for all non-cave biomes.</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/primary_area_type">primary_area_type</a></th><td>The type of the area that will be used for all non-cave biomes.</td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#var/smoothing_iterations">smoothing_iterations</a></th><td></td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/map_generator/planet_generator.html#proc/get_biome">get_biome</a></th><td>Checks the turf biome cache for the biome of the passed turf; if none is found, it is generated.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/biome_table"><aside class="declaration">var </aside>biome_table
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L34">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 34"/></a></h3>
+        <p>Effectively a 2D array of biomes, organized by heat categories, then humidity.
+Note that the heat categories are NOT all equal-size.</p><h3 id="var/birth_limit"><aside class="declaration">var </aside>birth_limit
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 18"/></a></h3>
+        <p>If an open (dead) cell has greater than this many neighbors, it become closed (alive).</p><h3 id="var/cave_area"><aside class="declaration">var </aside>cave_area
+            <aside>&ndash; /<a href="area.html">area</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L30">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 30"/></a></h3>
+        <p>The area instance that will be used for all cave biomes.</p><h3 id="var/cave_area_type"><aside class="declaration">var </aside>cave_area_type
+            <aside>&ndash; /<a href="area.html">area</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 28"/></a></h3>
+        <p>The type of the area that will be used for all cave biomes.</p><h3 id="var/cave_biome_table"><aside class="declaration">var </aside>cave_biome_table
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 39"/></a></h3>
+        <p>A 2D array of &quot;cave&quot; biomes that generate at &quot;heights&quot; above the mountain_height variable.
+Like normal biomes, they are organized by heat, then humidity; however, they do NOT
+use the same heat categories as the normal biome table does.</p><h3 id="var/death_limit"><aside class="declaration">var </aside>death_limit
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L20">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 20"/></a></h3>
+        <p>If a closed (alive) cell has fewer than this many neighbors, it will become open (dead).</p><h3 id="var/initial_closed_chance"><aside class="declaration">var </aside>initial_closed_chance
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 14"/></a></h3>
+        <p>Chance for a cell in the cavegen cellular automaton to start closed</p><h3 id="var/mountain_height"><aside class="declaration">var </aside>mountain_height
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 11"/></a></h3>
+        <p>If a turf's perlin-calculated &quot;height&quot; is above this value, a cave biome will be used to generate it.
+For best results, avoid values around 0.5; basic perlin noise can create noticeable straight-line artifacts
+around the midpoint value. A value of 1 or greater disables caves entirely.</p><h3 id="var/perlin_zoom"><aside class="declaration">var </aside>perlin_zoom
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 6"/></a></h3>
+        <p>Higher values of this variable result in larger biomes.</p><h3 id="var/primary_area"><aside class="declaration">var </aside>primary_area
+            <aside>&ndash; /<a href="area.html">area</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L25">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 25"/></a></h3>
+        <p>The area instance that will be used for all non-cave biomes.</p><h3 id="var/primary_area_type"><aside class="declaration">var </aside>primary_area_type
+            <aside>&ndash; /<a href="area.html">area</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L23">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 23"/></a></h3>
+        <p>The type of the area that will be used for all non-cave biomes.</p><h3 id="var/smoothing_iterations"><aside class="declaration">var </aside>smoothing_iterations
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L16">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 16"/></a></h3>
+        <h1 id="of-steps-that-the-cellular-automaton-is-run-for">of steps that the cellular automaton is run for</h1><h2 id="proc">Proc Details</h2><h3 id="proc/get_biome"><aside class="declaration">proc </aside>get_biome<aside>(/<a href="turf.html">turf</a>/a_turf) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/datums/mapgen/planetary/_PlanetGenerator.dm#L106">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;mapgen&#x2F;planetary&#x2F;_PlanetGenerator.dm 106"/></a></aside>
+        </h3>
+        <p>Checks the turf biome cache for the biome of the passed turf; if none is found, it is generated.</p></main>
+<footer>
+    shiptest.dme
+    <a href="https://github.com/Sector-Echo-13-Team/Echo-13/tree/a38b98b4569e16679edcf1c9c9ae13b070088f76">a38b98b</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien - Sector Echo 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Sector Echo 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="mob/living/carbon/alien.html#var">Var Details</a> - <a href="mob/living/carbon/alien.html#proc">Proc Details</a></header>
+<main>
+<h1>Alien <aside>/<a href="mob.html">mob</a>/<a href="mob/living.html">living</a>/<a href="mob/living/carbon.html">carbon</a>/<a href="mob/living/carbon/alien.html">alien</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/alien.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;alien.dm 10"/></a></h1>
+
+<p>The base subtype of all aliens.  Used to establish the basic mechanics (such as organs) they use.</p>
+<p>The normal alien subtpe, which no xeno actually uses.  This is used to solely to establish mechanics
+that all aliens inherit, such as organs, bodyparts, temperature handling, and so on.  Also allows
+aliens to receive an overlay on mobs with alien embryos inside of them.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="mob/living/carbon/alien.html#var/alien_name_regex">alien_name_regex</a></th><td>Used to detmine how to name the alien.</td></tr>
+            <tr><th><a href="mob/living/carbon/alien.html#var/leaping">leaping</a></th><td>Determines whether or not the alien is leaping.  Currently only used by the hunter.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="mob/living/carbon/alien.html#proc/AddInfectionImages">AddInfectionImages</a></th><td>Renders an icon on mobs with alien embryos inside them.</td></tr>
+            <tr><th><a href="mob/living/carbon/alien.html#proc/RemoveInfectionImages">RemoveInfectionImages</a></th><td>Removes all client embryo displays.</td></tr>
+            <tr><th><a href="mob/living/carbon/alien.html#proc/adjustStaminaLoss">adjustStaminaLoss</a></th><td>aliens are immune to stamina damage.</td></tr>
+            <tr><th><a href="mob/living/carbon/alien.html#proc/adjustToxLoss">adjustToxLoss</a></th><td>alien immune to tox damage</td></tr>
+            <tr><th><a href="mob/living/carbon/alien.html#proc/getToxLoss">getToxLoss</a></th><td>alien immune to tox damage</td></tr>
+            <tr><th><a href="mob/living/carbon/alien.html#proc/get_standard_pixel_y_offset">get_standard_pixel_y_offset</a></th><td>Handles the transformations of one alien type to another.</td></tr>
+            <tr><th><a href="mob/living/carbon/alien.html#proc/setStaminaLoss">setStaminaLoss</a></th><td>aliens are immune to stamina damage.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/alien_name_regex"><aside class="declaration">var </aside>alien_name_regex
+            <aside>&ndash; /static/regex</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/alien.dm#L38">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;alien.dm 38"/></a></h3>
+        <p>Used to detmine how to name the alien.</p><h3 id="var/leaping"><aside class="declaration">var </aside>leaping
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/alien.dm#L35">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;alien.dm 35"/></a></h3>
+        <p>Determines whether or not the alien is leaping.  Currently only used by the hunter.</p><h2 id="proc">Proc Details</h2><h3 id="proc/AddInfectionImages"><aside class="declaration">proc </aside>AddInfectionImages<aside>() 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/alien.dm#L122">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;alien.dm 122"/></a></aside>
+        </h3>
+        <p>Renders an icon on mobs with alien embryos inside them.</p>
+<p>Renders an icon on mobs with alien embryos inside them for the client.
+Only aliens can see these, with others not seeing anything at all.</p><h3 id="proc/RemoveInfectionImages"><aside class="declaration">proc </aside>RemoveInfectionImages<aside>() 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/alien.dm#L140">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;alien.dm 140"/></a></aside>
+        </h3>
+        <p>Removes all client embryo displays.</p>
+<p>Removes the embryo icon visuals from the client controlling the alien.</p><h3 id="proc/adjustStaminaLoss">adjustStaminaLoss<aside>(amount, updating_health, forced) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/damage_procs.dm#L10">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;damage_procs.dm 10"/></a></aside>
+        </h3>
+        <p>aliens are immune to stamina damage.</p><h3 id="proc/adjustToxLoss">adjustToxLoss<aside>(amount, updating_health, forced) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/damage_procs.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;damage_procs.dm 6"/></a></aside>
+        </h3>
+        <p>alien immune to tox damage</p><h3 id="proc/getToxLoss">getToxLoss<aside>() 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/damage_procs.dm#L2">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;damage_procs.dm 2"/></a></aside>
+        </h3>
+        <p>alien immune to tox damage</p><h3 id="proc/get_standard_pixel_y_offset">get_standard_pixel_y_offset<aside>(lying) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/alien.dm#L159">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;alien.dm 159"/></a></aside>
+        </h3>
+        <p>Handles the transformations of one alien type to another.</p>
+<p>Handles the transformation of an alien into another type of alien.
+Gives them some message fluff, transfers their mind (important as to transfer other antag statuses)
+and then also transfers their nanites should the original body have them.
+Arguments:</p>
+<ul>
+<li>new_xeno - The new body of the alien.</li>
+</ul><h3 id="proc/setStaminaLoss">setStaminaLoss<aside>(amount, updating_health) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/mob/living/carbon/alien/damage_procs.dm#L14">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien&#x2F;damage_procs.dm 14"/></a></aside>
+        </h3>
+        <p>aliens are immune to stamina damage.</p></main>
+<footer>
+    shiptest.dme
+    <a href="https://github.com/Sector-Echo-13-Team/Echo-13/tree/a38b98b4569e16679edcf1c9c9ae13b070088f76">a38b98b</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;mission - Sector Echo 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Sector Echo 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/mission.html#var">Var Details</a> - <a href="datum/mission.html#proc">Proc Details</a></header>
+<main>
+<h1>mission <aside>/<a href="datum.html">datum</a>/<a href="datum/mission.html">mission</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L1">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 1"/></a></h1>
+
+<table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/mission.html#var/bound_atoms">bound_atoms</a></th><td>Assoc list of atoms &quot;bound&quot; to this mission; each atom is associated with a 2-element list. The first
+entry in that list is a bool that determines if the mission should fail when the atom qdeletes; the second
+is a callback to be invoked upon the atom's qdeletion.</td></tr>
+            <tr><th><a href="datum/mission.html#var/dur_mod_range">dur_mod_range</a></th><td>The maximum deviation of the mission's true duration from the base value, as a proportion.</td></tr>
+            <tr><th><a href="datum/mission.html#var/dur_value_scaling">dur_value_scaling</a></th><td>The relative probability of this mission being selected. 0-weight missions are never selected.
+Should mission value scale proportionally to the deviation from the mission's base duration?</td></tr>
+            <tr><th><a href="datum/mission.html#var/duration">duration</a></th><td>The mission's payout.</td></tr>
+            <tr><th><a href="datum/mission.html#var/servant">servant</a></th><td>The ship that accepted this mission. Passed in accept().</td></tr>
+            <tr><th><a href="datum/mission.html#var/source_outpost">source_outpost</a></th><td>The outpost that issued this mission. Passed in New().</td></tr>
+            <tr><th><a href="datum/mission.html#var/val_mod_range">val_mod_range</a></th><td>The maximum deviation of the mission's true value from the base value, as a proportion.</td></tr>
+            <tr><th><a href="datum/mission.html#var/weight">weight</a></th><td>The amount of time in which to complete the mission.</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/mission.html#proc/bound_deleted">bound_deleted</a></th><td>Signal handler for the qdeletion of bound atoms.</td></tr>
+            <tr><th><a href="datum/mission.html#proc/recall_bound">recall_bound</a></th><td>Removes the given atom from the mission's bound items, then qdeletes it.
+Does not invoke the callback or fail the mission; optionally creates sparks.</td></tr>
+            <tr><th><a href="datum/mission.html#proc/remove_bound">remove_bound</a></th><td>Removes the given bound atom from the list of bound atoms.
+Does not invoke the associated callback or fail the mission.</td></tr>
+            <tr><th><a href="datum/mission.html#proc/spawn_bound">spawn_bound</a></th><td>Spawns a &quot;bound&quot; atom of the given type at the given location. When the &quot;bound&quot; atom
+is qdeleted, the passed-in callback is invoked, and, by default, the mission fails.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/bound_atoms"><aside class="declaration">var </aside>bound_atoms
+            <aside>&ndash; /list/atom/movable</aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L29">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 29"/></a></h3>
+        <p>Assoc list of atoms &quot;bound&quot; to this mission; each atom is associated with a 2-element list. The first
+entry in that list is a bool that determines if the mission should fail when the atom qdeletes; the second
+is a callback to be invoked upon the atom's qdeletion.</p><h3 id="var/dur_mod_range"><aside class="declaration">var </aside>dur_mod_range
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L13">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 13"/></a></h3>
+        <p>The maximum deviation of the mission's true duration from the base value, as a proportion.</p><h3 id="var/dur_value_scaling"><aside class="declaration">var </aside>dur_value_scaling
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L9">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 9"/></a></h3>
+        <p>The relative probability of this mission being selected. 0-weight missions are never selected.
+Should mission value scale proportionally to the deviation from the mission's base duration?</p><h3 id="var/duration"><aside class="declaration">var </aside>duration
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L5">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 5"/></a></h3>
+        <p>The mission's payout.</p><h3 id="var/servant"><aside class="declaration">var </aside>servant
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/overmap.html">overmap</a>/<a href="datum/overmap/ship.html">ship</a>/<a href="datum/overmap/ship/controlled.html">controlled</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L18">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 18"/></a></h3>
+        <p>The ship that accepted this mission. Passed in accept().</p><h3 id="var/source_outpost"><aside class="declaration">var </aside>source_outpost
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/overmap.html">overmap</a>/<a href="datum/overmap/dynamic.html">dynamic</a>/<a href="datum/overmap/dynamic/outpost.html">outpost</a></aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L16">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 16"/></a></h3>
+        <p>The outpost that issued this mission. Passed in New().</p><h3 id="var/val_mod_range"><aside class="declaration">var </aside>val_mod_range
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L11">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 11"/></a></h3>
+        <p>The maximum deviation of the mission's true value from the base value, as a proportion.</p><h3 id="var/weight"><aside class="declaration">var </aside>weight
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L6">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 6"/></a></h3>
+        <p>The amount of time in which to complete the mission.</p><h2 id="proc">Proc Details</h2><h3 id="proc/bound_deleted"><aside class="declaration">proc </aside>bound_deleted<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/bound, force) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L136">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 136"/></a></aside>
+        </h3>
+        <p>Signal handler for the qdeletion of bound atoms.</p><h3 id="proc/recall_bound"><aside class="declaration">proc </aside>recall_bound<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/bound, sparks) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L129">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 129"/></a></aside>
+        </h3>
+        <p>Removes the given atom from the mission's bound items, then qdeletes it.
+Does not invoke the callback or fail the mission; optionally creates sparks.</p>
+<p>Arguments:</p>
+<ul>
+<li>bound - The bound atom to recall.</li>
+<li>sparks - Whether to spawn sparks on the turf the bound atom is located on. Default TRUE.</li>
+</ul><h3 id="proc/remove_bound"><aside class="declaration">proc </aside>remove_bound<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/bound) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L154">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 154"/></a></aside>
+        </h3>
+        <p>Removes the given bound atom from the list of bound atoms.
+Does not invoke the associated callback or fail the mission.</p>
+<p>Arguments:</p>
+<ul>
+<li>bound - The bound atom to remove.</li>
+</ul><h3 id="proc/spawn_bound"><aside class="declaration">proc </aside>spawn_bound<aside>(/<a href="atom.html">atom</a>/<a href="atom/movable.html">movable</a>/a_type, a_loc, destroy_cb, fail_on_delete, sparks) 
+        
+    
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/modules/overmap/missions.dm#L111">
+        <img src="git.png" width="16" height="16" title="code&#x2F;modules&#x2F;overmap&#x2F;missions.dm 111"/></a></aside>
+        </h3>
+        <p>Spawns a &quot;bound&quot; atom of the given type at the given location. When the &quot;bound&quot; atom
+is qdeleted, the passed-in callback is invoked, and, by default, the mission fails.</p>
+<p>Intended to be used to spawn mission-linked atoms that can have
+references saved without causing harddels.</p>
+<p>Arguments:</p>
+<ul>
+<li>a_type - The type of the atom to be spawned. Must be of type /atom/movable.</li>
+<li>a_loc - The location to spawn the bound atom at.</li>
+<li>destroy_cb - The callback to invoke when the bound atom is qdeleted. Default is null.</li>
+<li>fail_on_delete - Bool; whether the mission should fail when the bound atom is qdeleted. Default TRUE.</li>
+<li>sparks - Whether to spawn sparks after spawning the bound atom. Default TRUE.</li>
+</ul></main>
+<footer>
+    shiptest.dme
+    <a href="https://github.com/Sector-Echo-13-Team/Echo-13/tree/a38b98b4569e16679edcf1c9c9ae13b070088f76">a38b98b</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>

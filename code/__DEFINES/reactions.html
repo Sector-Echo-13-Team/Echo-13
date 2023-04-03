@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>code&#x2F;__DEFINES&#x2F;reactions.dm - Sector Echo 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Sector Echo 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="code/__DEFINES/reactions.html#define">Define Details</a></header>
+<main>
+<h1>code/__DEFINES/reactions.dm 
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/__DEFINES/reactions.dm">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;reactions.dm"/></a></h1>
+
+<table class="summary" cellspacing="0">
+        <tr><th><a href="code/__DEFINES/reactions.html#define/TOROID_CALCULATED_THRESHOLD">TOROID_CALCULATED_THRESHOLD</a></th><td>changing it by 0.1 generally doubles or halves fusion temps</td></tr>
+        <tr><th><a href="code/__DEFINES/reactions.html#define/FUSION_SCALE_DIVISOR">FUSION_SCALE_DIVISOR</a></th><td>Used to be Pi</td></tr>
+        <tr><th><a href="code/__DEFINES/reactions.html#define/FUSION_SLOPE_DIVISOR">FUSION_SLOPE_DIVISOR</a></th><td>This number is probably the safest number to change</td></tr>
+        <tr><th><a href="code/__DEFINES/reactions.html#define/FUSION_ENERGY_TRANSLATION_EXPONENT">FUSION_ENERGY_TRANSLATION_EXPONENT</a></th><td>This number is probably the most dangerous number to change</td></tr>
+        <tr><th><a href="code/__DEFINES/reactions.html#define/FUSION_BASE_TEMPSCALE">FUSION_BASE_TEMPSCALE</a></th><td>This number is responsible for orchestrating fusion temperatures</td></tr>
+        <tr><th><a href="code/__DEFINES/reactions.html#define/FUSION_RAD_MIDPOINT">FUSION_RAD_MIDPOINT</a></th><td>If you decrease this by one, the fusion rads will <em>triple</em> and vice versa</td></tr>
+        <tr><th><a href="code/__DEFINES/reactions.html#define/FUSION_MIDDLE_ENERGY_REFERENCE">FUSION_MIDDLE_ENERGY_REFERENCE</a></th><td>This number is deceptively dangerous; sort of tied to TOROID_CALCULATED_THRESHOLD</td></tr>
+        <tr><th><a href="code/__DEFINES/reactions.html#define/FUSION_BUFFER_DIVISOR">FUSION_BUFFER_DIVISOR</a></th><td>Increase this to cull unrobust fusions faster</td></tr></table><h2 id="define">Define Details</h2>
+<h3 id="define/FUSION_BASE_TEMPSCALE"><aside class="declaration">#define </aside>FUSION_BASE_TEMPSCALE
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/__DEFINES/reactions.dm#L55">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;reactions.dm 55"/></a>
+    </h3>
+    <p>This number is responsible for orchestrating fusion temperatures</p><h3 id="define/FUSION_BUFFER_DIVISOR"><aside class="declaration">#define </aside>FUSION_BUFFER_DIVISOR
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/__DEFINES/reactions.dm#L58">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;reactions.dm 58"/></a>
+    </h3>
+    <p>Increase this to cull unrobust fusions faster</p><h3 id="define/FUSION_ENERGY_TRANSLATION_EXPONENT"><aside class="declaration">#define </aside>FUSION_ENERGY_TRANSLATION_EXPONENT
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/__DEFINES/reactions.dm#L54">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;reactions.dm 54"/></a>
+    </h3>
+    <p>This number is probably the most dangerous number to change</p><h3 id="define/FUSION_MIDDLE_ENERGY_REFERENCE"><aside class="declaration">#define </aside>FUSION_MIDDLE_ENERGY_REFERENCE
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/__DEFINES/reactions.dm#L57">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;reactions.dm 57"/></a>
+    </h3>
+    <p>This number is deceptively dangerous; sort of tied to TOROID_CALCULATED_THRESHOLD</p><h3 id="define/FUSION_RAD_MIDPOINT"><aside class="declaration">#define </aside>FUSION_RAD_MIDPOINT
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/__DEFINES/reactions.dm#L56">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;reactions.dm 56"/></a>
+    </h3>
+    <p>If you decrease this by one, the fusion rads will <em>triple</em> and vice versa</p><h3 id="define/FUSION_SCALE_DIVISOR"><aside class="declaration">#define </aside>FUSION_SCALE_DIVISOR
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/__DEFINES/reactions.dm#L51">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;reactions.dm 51"/></a>
+    </h3>
+    <p>Used to be Pi</p><h3 id="define/FUSION_SLOPE_DIVISOR"><aside class="declaration">#define </aside>FUSION_SLOPE_DIVISOR
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/__DEFINES/reactions.dm#L53">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;reactions.dm 53"/></a>
+    </h3>
+    <p>This number is probably the safest number to change</p><h3 id="define/TOROID_CALCULATED_THRESHOLD"><aside class="declaration">#define </aside>TOROID_CALCULATED_THRESHOLD
+            <a href="https://github.com/Sector-Echo-13-Team/Echo-13/blob/a38b98b4569e16679edcf1c9c9ae13b070088f76/code/__DEFINES/reactions.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;__DEFINES&#x2F;reactions.dm 47"/></a>
+    </h3>
+    <p>changing it by 0.1 generally doubles or halves fusion temps</p></main>
+<footer>
+    shiptest.dme
+    <a href="https://github.com/Sector-Echo-13-Team/Echo-13/tree/a38b98b4569e16679edcf1c9c9ae13b070088f76">a38b98b</a>
+        (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>
