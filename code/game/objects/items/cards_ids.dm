@@ -199,7 +199,7 @@
 	if(istype(W, /obj/item/holochip))
 		insert_money(W, user)
 		return
-	else if(istype(W, /obj/item/stack/spacecash))
+	else if(istype(W, /obj/item/spacecash/bundle))
 		insert_money(W, user, TRUE)
 		return
 	else if(istype(W, /obj/item/coin))
@@ -706,7 +706,6 @@ update_label()
 	lefthand_file = 'icons/mob/inhands/equipment/idcards_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/idcards_righthand.dmi'
 	assignment = "Prisoner"
-	registered_name = "Scum"
 	uses_overlays = FALSE
 	var/goal = 0 //How far from freedom?
 	var/points = 0
