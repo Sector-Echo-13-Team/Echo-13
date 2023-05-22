@@ -6,6 +6,8 @@
 	righthand_file = 'echo13/icons/mob/inhands/weapons/guns_righthand.dmi'
 	icon_state = "gausspistol"
 	item_state = "gausspistol5"
+	slot_flags = ITEM_SLOT_BELT
+	mob_overlay_icon = 'echo13/icons/mob/clothing/belt.dmi'
 	cell_type = /obj/item/stock_parts/cell/gun/mini
 	small_gun = TRUE
 	bolt_type = BOLT_TYPE_OPEN
