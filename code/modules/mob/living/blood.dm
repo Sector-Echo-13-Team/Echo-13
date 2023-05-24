@@ -52,7 +52,7 @@
 				nutrition_ratio *= 1.25
 			adjust_nutrition(-nutrition_ratio * HUNGER_FACTOR)
 			blood_volume = min(BLOOD_VOLUME_NORMAL, blood_volume + 0.5 * nutrition_ratio)
-		if(blood_volume < BLOOD_VOLUME_NORMAL && HAS_TRAIT(src, TRAIT_NOHUNGER) && !(NOHEART in dna.species.species_traits)) //blood regen for non eaters
+		if(blood_volume < BLOOD_VOLUME_NORMAL && HAS_TRAIT(src, TRAIT_NOHUNGER)) //blood regen for non eaters
 			blood_volume = min(BLOOD_VOLUME_NORMAL, blood_volume + 0.5 * 1.25) //assumes best nutrition conditions for non eaters because they don't eat
 
 		//Effects of bloodloss
@@ -134,16 +134,16 @@
 //Gets blood from mob to a container or other mob, preserving all data in it.
 /mob/living/proc/transfer_blood_to(atom/movable/AM, amount, forced)
 	if(!blood_volume || !AM.reagents)
-		return 0
+		return FALSE
 	if(blood_volume < BLOOD_VOLUME_BAD && !forced)
-		return 0
+		return FALSE
 
 	if(blood_volume < amount)
 		amount = blood_volume
 
 	var/blood_id = get_blood_id()
 	if(!blood_id)
-		return 0
+		return FALSE
 
 	blood_volume -= amount
 
@@ -159,15 +159,17 @@
 						if((D.spread_flags & DISEASE_SPREAD_SPECIAL) || (D.spread_flags & DISEASE_SPREAD_NON_CONTAGIOUS))
 							continue
 						C.ForceContractDisease(D)
-				if(!(blood_data["blood_type"] in get_safe_blood(C.dna.blood_type)))
+
+				var/datum/blood_type/blood_type = blood_data["blood_type"]
+				if(!blood_type || !(blood_type.type in C.dna.blood_type.compatible_types))
 					C.reagents.add_reagent(/datum/reagent/toxin, amount * 0.5)
-					return 1
+					return TRUE
 
 			C.blood_volume = min(C.blood_volume + round(amount, 0.1), BLOOD_VOLUME_MAX_LETHAL)
-			return 1
+			return TRUE
 
 	AM.reagents.add_reagent(blood_id, amount, blood_data, bodytemperature)
-	return 1
+	return TRUE
 
 
 /mob/living/proc/get_blood_data(blood_id)
@@ -235,28 +237,16 @@
 	return /datum/reagent/blood
 
 // This is has more potential uses, and is probably faster than the old proc.
-/proc/get_safe_blood(bloodtype)
-	. = list()
-	if(!bloodtype)
-		return
+/proc/random_blood_type()
+	return get_blood_type(pick(4;"O-", 36;"O+", 3;"A-", 28;"A+", 1;"B-", 20;"B+", 1;"AB-", 5;"AB+"))
 
-	var/static/list/bloodtypes_safe = list(
-		"A-" = list("A-", "O-", "Draculine"),
-		"A+" = list("A-", "A+", "O-", "O+", "Draculine"),
-		"B-" = list("B-", "O-", "Draculine"),
-		"B+" = list("B-", "B+", "O-", "O+", "Draculine"),
-		"AB-" = list("A-", "B-", "O-", "AB-", "Draculine"),
-		"AB+" = list("A-", "A+", "B-", "B+", "O-", "O+", "AB-", "AB+", "Draculine"),
-		"O-" = list("O-", "Draculine"),
-		"O+" = list("O-", "O+", "Draculine"),
-		"L" = list("L", "Draculine"),
-		"Draculine" = list("A-", "A+", "B-", "B+", "O-", "O+", "AB-", "AB+", "L", "U", "Draculine"),
-		"U" = list("A-", "A+", "B-", "B+", "O-", "O+", "AB-", "AB+", "L", "U", "Draculine")
-	)
+/proc/get_blood_type(type)
+	return GLOB.blood_types[type]
 
-	var/safe = bloodtypes_safe[bloodtype]
-	if(safe)
-		. = safe
+/proc/get_blood_dna_color(list/blood_dna)
+	var/blood_print = blood_dna[length(blood_dna)]
+	var/datum/blood_type/blood_type = blood_dna[blood_print]
+	return blood_type.color
 
 //to add a splatter of blood or other mob liquid.
 /mob/living/proc/add_splatter_floor(turf/T, small_drip)
@@ -292,7 +282,7 @@
 		break
 	if(!B)
 		B = new /obj/effect/decal/cleanable/blood/splatter(T, get_static_viruses())
-	B.bloodiness = min((B.bloodiness + BLOOD_AMOUNT_PER_DECAL),MAX_SHOE_BLOODINESS)
+	B.bloodiness = min((B.bloodiness + BLOOD_AMOUNT_PER_DECAL), BLOOD_POOL_MAX)
 	B.transfer_mob_blood_dna(src) //give blood info to the blood decal.
 	if(temp_blood_DNA)
 		B.add_blood_DNA(temp_blood_DNA)
