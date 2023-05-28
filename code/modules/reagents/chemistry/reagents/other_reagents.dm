@@ -25,7 +25,7 @@
 
 	if(iscarbon(L))
 		var/mob/living/carbon/exposed_carbon = L
-		if(exposed_carbon.get_blood_id() == /datum/reagent/blood && (method == INJECT || (method == INGEST && exposed_carbon.dna && exposed_carbon.dna.species && (DRINKSBLOOD in exposed_carbon.dna.species.species_traits))))
+		if((exposed_carbon.get_blood_id() == /datum/reagent/blood || exposed_carbon.get_blood_id() == /datum/reagent/blood/true_draculine) && (method == INJECT || (method == INGEST && exposed_carbon.dna && exposed_carbon.dna.species && (DRINKSBLOOD in exposed_carbon.dna.species.species_traits))))
 			if(data && data["blood_type"])
 				var/datum/blood_type/blood_type = data["blood_type"]
 				if(blood_type.type in exposed_carbon.dna.blood_type.compatible_types)
@@ -35,8 +35,6 @@
 
 /datum/reagent/blood/true_draculine
 	name = "True Draculine"
-	data = list("donor"=null,"viruses"=null,"blood_DNA"=null,"blood_type"="Draculine","resistances"=null,"trace_chem"=null,"mind"=null,"ckey"=null,"gender"=null,"real_name"=null,"cloneable"=null,"factions"=null,"quirks"=null)
-	color = "#850f2c"
 	description = "Slowly heals all damage types. Overdose will, after a short while, turn you into a vampire, addiction lowers your max health as your body attempts to fight off the corruption, if you're incompatible you're immune to the addiction and overdose will damage you instead."
 	metabolization_rate = 1
 	addiction_threshold = 20

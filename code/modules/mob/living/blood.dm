@@ -176,7 +176,7 @@
 	return
 
 /mob/living/carbon/get_blood_data(blood_id)
-	if(blood_id == /datum/reagent/blood) //actual blood reagent
+	if(blood_id == /datum/reagent/blood || blood_id == /datum/reagent/blood/true_draculine) //actual blood reagent
 		var/blood_data = list()
 		//set the blood data
 		blood_data["donor"] = src
@@ -250,7 +250,7 @@
 
 //to add a splatter of blood or other mob liquid.
 /mob/living/proc/add_splatter_floor(turf/T, small_drip)
-	if(get_blood_id() != /datum/reagent/blood)
+	if(get_blood_id() != /datum/reagent/blood && get_blood_id() != /datum/reagent/blood/true_draculine)
 		return
 	if(!T)
 		T = get_turf(src)

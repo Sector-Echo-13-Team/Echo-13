@@ -253,6 +253,7 @@
 	vampire_transfer.Grant(H)
 	old_blood = H.dna.blood_type
 	H.dna.species.exotic_blood = /datum/reagent/blood/true_draculine
+	H.dna.blood_type = get_blood_type("Draculine")
 	H.dna.species.species_traits |= species_traits
 	H.dna.species.inherent_biotypes = MOB_UNDEAD|MOB_HUMANOID
 
@@ -319,8 +320,8 @@
 			if(victim.stat == DEAD)
 				to_chat(H, "<span class='warning'>You need a living victim!</span>")
 				break
-			if(!victim.blood_volume || (victim.dna && ((NOBLOOD in victim.dna.species.species_traits) || victim.dna.species.exotic_blood)))
-				to_chat(H, "<span class='warning'>[victim] doesn't have blood!</span>")
+			if(!victim.blood_volume || (victim.dna && ((NOBLOOD in victim.dna.species.species_traits) || !(victim.dna.blood_type.type in H.dna.blood_type.compatible_types))))
+				to_chat(H, "<span class='warning'>[victim] doesn't have suitable blood!</span>")
 				break
 			H.quirk_cooldown["Vampire"] = world.time + 30
 			if(victim.anti_magic_check(FALSE, TRUE, FALSE, 0))
@@ -368,8 +369,8 @@
 			if(victim.stat == DEAD)
 				to_chat(H, "<span class='warning'>You need to transfer blood to a living being!</span>")
 				return
-			if(!victim.blood_volume || (victim.dna && ((NOBLOOD in victim.dna.species.species_traits) || victim.dna.species.exotic_blood)))
-				to_chat(H, "<span class='warning'>[victim] doesn't have blood!</span>")
+			if(!victim.blood_volume || (victim.dna && ((NOBLOOD in victim.dna.species.species_traits) || !(victim.dna.blood_type.type in H.dna.blood_type.compatible_types))))
+				to_chat(H, "<span class='warning'>[victim] doesn't have suitable blood!</span>")
 				return
 			H.quirk_cooldown["Vampire Transfer"] = world.time + 20
 			if(victim.anti_magic_check(FALSE, TRUE, FALSE, 0))
@@ -398,4 +399,4 @@
 /mob/living/carbon/get_status_tab_items()
 	. = ..()
 	if(has_quirk(/datum/quirk/vampire))
-		. += "<span class='notice'>Current blood level: [blood_volume]/[BLOOD_VOLUME_MAXIMUM].</span>"
+		. += "Current blood level: [blood_volume]/[BLOOD_VOLUME_MAXIMUM]."
