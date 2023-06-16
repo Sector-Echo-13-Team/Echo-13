@@ -430,9 +430,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod/retro, 17)
 
 /obj/machinery/cryopod/apply_effects_to_mob(mob/living/carbon/sleepyhead)
 	sleepyhead.SetSleeping(60)
-	sleepyhead.set_disgust(57) // puke maybe once maybe twice
 	sleepyhead.set_nutrition(200)
-	to_chat(sleepyhead, "<span class='userdanger'>A wave of nausea comes over you, brought on by cryosleep...</span>")
+	to_chat(sleepyhead, "<span class='userdanger'>A dull hunger greets your awakening, brought on by cryosleep...</span>") // cryo sickness from every pod in existence? no thanks!
 
 /obj/machinery/cryopod/poor
 	name = "low quality cryogenic freezer"
