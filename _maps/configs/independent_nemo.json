@@ -11,20 +11,16 @@
 	"map_path": "_maps/shuttles/shiptest/independent_nemo.dmm",
 	"job_slots": {
 		"Research Director": 1,
-		"Fauna Researcher": {
-			"outfit": "/datum/outfit/job/scientist",
+		"Wildlife Biologist": {
+			"outfit": "/datum/outfit/job/scientist/xenobiologist",
 			"slots": 1
 		},
-		"Fauna Retrieval Specialist": {
-			"outfit": "/datum/outfit/job/miner/scientist",
+		"Biomechanical Engineer": {
+			"outfit": "/datum/outfit/job/roboticist/biomechanicalengineer",
 			"slots": 1
 		},
 		"Excavator": {
 			"outfit": "/datum/outfit/job/miner/hazard",
-			"slots": 1
-		},
-		"Mech Pilot": {
-			"outfit": "/datum/outfit/job/roboticist/technician",
 			"slots": 1
 		},
 		"Ship Engineer": {
@@ -33,7 +29,10 @@
 		},
 		"Atmospheric Technician": 1,
 		"Curator": 1,
-		"Assistant": 1
+		"Lab Assistant": {
+			"outfit": "/datum/outfit/job/assistant/sciencespecialist",
+			"slots": 1
+		}
 	},
 	"enabled": true
 }
