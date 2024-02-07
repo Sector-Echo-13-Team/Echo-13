@@ -151,3 +151,9 @@
 	id = "crashed_pinnance"
 	description = "A crashed shuttlecraft, looks like the pilot didn't make it."
 	suffix = "lavaland_surface_crashed_pinnance.dmm"
+
+/datum/map_template/ruin/lavaland/surveystation
+	name = "Abandoned Survey Station"
+	id = "survey_station"
+	description = "An abandoned research post. The occupants seem to have left in a hurry; most of them, at least."
+	suffix = "lavaland_surface_surveystation.dmm"
