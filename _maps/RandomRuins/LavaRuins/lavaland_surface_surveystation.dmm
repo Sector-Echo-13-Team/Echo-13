@@ -1,4 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ai" = (
+/turf/closed/wall/r_wall,
+/area/ruin/unpowered/surveystation/researcharea)
 "av" = (
 /obj/machinery/atmospherics/components/unary/portables_connector{
 	dir = 8
@@ -7,7 +10,24 @@
 	anchored = 1
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
+"aB" = (
+/turf/closed/wall/r_wall,
+/area/ruin/unpowered/surveystation/dormitories)
+"bp" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/hallway)
 "bv" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -15,36 +35,58 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "bQ" = (
 /obj/structure/table,
 /obj/effect/spawner/lootdrop/donkpockets,
 /obj/effect/spawner/lootdrop/donkpockets,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
+"cd" = (
+/obj/machinery/power/apc/auto_name/directional/north{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 0
+	},
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plasteel/tech,
+/area/ruin/unpowered/surveystation/virologyarea)
 "cs" = (
 /obj/structure/girder/reinforced,
 /turf/open/floor/plating/airless,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
+"cI" = (
+/turf/closed/wall,
+/area/ruin/unpowered/surveystation/director)
 "cK" = (
 /obj/structure/frame/computer{
 	anchored = 1
 	},
 /obj/item/shard,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "cX" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "dl" = (
 /obj/machinery/rnd/server,
 /turf/open/floor/circuit/green/telecomms,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "do" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/salvage/plasma,
@@ -52,22 +94,34 @@
 /obj/effect/spawner/lootdrop/salvage/plasma,
 /obj/effect/spawner/lootdrop/salvage/plasma,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "dJ" = (
 /obj/item/pipe_meter,
 /turf/open/floor/plating,
 /area/lavaland/surface)
+"dQ" = (
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/hallway)
 "dW" = (
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/lavaland/surface)
+"ek" = (
+/turf/closed/wall,
+/area/ruin/unpowered/surveystation/researcharea)
 "eE" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 1
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
+"eN" = (
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/director)
 "eV" = (
 /obj/structure/closet/secure{
 	icon_state = "rd";
@@ -87,7 +141,7 @@
 /obj/item/clothing/head/beret/rd,
 /obj/item/clothing/suit/longcoat/science,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "eZ" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Maintenance";
@@ -96,18 +150,27 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "fu" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/tracks{
+	dir = 10
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "fI" = (
 /obj/structure/table,
 /obj/item/modular_computer/laptop/preset,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "fK" = (
 /turf/open/floor/plating/rust,
 /area/lavaland/surface)
@@ -117,66 +180,106 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "gt" = (
 /obj/machinery/vending/assist,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
+"gy" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/hallway)
 "gz" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "gK" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden,
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "hg" = (
 /obj/structure/frame/machine{
 	anchored = 1
 	},
 /obj/item/circuitboard/machine/circuit_imprinter/department/science,
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "hJ" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
+"hS" = (
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/reception)
 "hV" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "ia" = (
 /obj/machinery/door/airlock/science{
 	name = "Director's Office"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
+"iI" = (
+/obj/machinery/power/apc/auto_name/directional/south{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 0
+	},
+/obj/machinery/power/terminal,
+/obj/structure/cable,
+/turf/open/floor/plasteel/tech/grid,
+/area/ruin/unpowered/surveystation/techvault)
+"iJ" = (
+/turf/open/floor/plasteel/tech/grid,
+/area/ruin/unpowered/surveystation/virologyarea)
 "iN" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "iR" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
+"ja" = (
+/turf/closed/wall/r_wall,
+/area/ruin/unpowered/surveystation/techvault)
 "je" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2,
 /obj/item/ammo_casing/spent,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "jh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
@@ -184,32 +287,42 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 10
 	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "ju" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "jz" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms";
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "jH" = (
 /obj/structure/chair/office,
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "jK" = (
 /obj/machinery/atmospherics/components/binary/dp_vent_pump{
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "jS" = (
 /obj/machinery/advanced_airlock_controller{
 	pixel_y = 28
@@ -218,33 +331,50 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "jV" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/insectguts,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "kc" = (
 /obj/machinery/computer/rdconsole/core{
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "kd" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "kf" = (
-/obj/structure/closet/firecloset/full,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
+/obj/machinery/power/apc/auto_name/directional/south{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 0
+	},
+/obj/machinery/power/terminal,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
+"kg" = (
+/obj/effect/decal/cleanable/blood/old,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/mono,
+/area/ruin/unpowered/surveystation/canteen)
 "kL" = (
 /obj/machinery/portable_atmospherics/scrubber,
 /turf/open/floor/plating,
@@ -253,21 +383,24 @@
 /obj/structure/table/chem,
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "le" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/door/airlock/public/glass{
 	name = "Canteen"
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "lv" = (
 /obj/machinery/light/small/directional/north,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 6
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "mb" = (
 /obj/machinery/door/airlock/external{
 	req_access_txt = "150";
@@ -277,37 +410,43 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "mf" = (
 /obj/structure/chair{
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "mm" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "mC" = (
 /obj/machinery/vending/coffee,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "mI" = (
 /turf/closed/wall/r_wall,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "mR" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 6
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "mZ" = (
 /obj/structure/table,
 /obj/item/camera_film,
 /obj/item/camera,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "nh" = (
 /obj/structure/rack,
 /obj/item/storage/toolbox/electrical{
@@ -317,18 +456,24 @@
 /obj/item/storage/toolbox/mechanical,
 /obj/effect/spawner/lootdrop/maintenance/two,
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
+"nk" = (
+/turf/closed/wall/r_wall,
+/area/ruin/unpowered/surveystation/reception)
 "nq" = (
 /obj/machinery/light/small/directional/east,
 /obj/effect/decal/cleanable/oil/streak,
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
+"nu" = (
+/turf/closed/wall/r_wall/rust,
+/area/ruin/unpowered/surveystation/power)
 "nw" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "nQ" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Canteen"
@@ -336,7 +481,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/abandoned,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "ol" = (
 /obj/machinery/door/airlock/virology{
 	frequency = 1449;
@@ -347,28 +492,52 @@
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
+"oH" = (
+/turf/closed/wall/r_wall/rust,
+/area/ruin/unpowered/surveystation/techvault)
 "oK" = (
 /obj/machinery/light/directional/north,
 /obj/effect/decal/cleanable/oil/streak,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
+"oM" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/hallway)
+"oZ" = (
+/turf/closed/wall/r_wall/rust,
+/area/ruin/unpowered/surveystation/servers)
 "pa" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "ph" = (
 /obj/structure/frame/machine,
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
+"pm" = (
+/turf/closed/wall,
+/area/ruin/unpowered/surveystation/servers)
 "pq" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "px" = (
 /obj/machinery/power/terminal{
 	dir = 1
@@ -377,34 +546,34 @@
 	icon_state = "0-2"
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "pA" = (
 /turf/closed/wall/r_wall/rust,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "pB" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/circuit/green/telecomms,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "pF" = (
 /obj/machinery/vending/cola/random,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "pS" = (
 /obj/machinery/light/directional/west,
 /obj/effect/gibspawner/larva/bodypartless,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "qc" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/random_machine_circuit_mech,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "qB" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 9
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "qK" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 4
@@ -412,8 +581,27 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
+"qX" = (
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/hallway)
+"ra" = (
+/turf/closed/wall/r_wall/rust,
+/area/ruin/unpowered/surveystation/canteen)
 "ri" = (
 /obj/effect/spawner/lootdrop/maintenance/two,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -427,18 +615,53 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
+"rl" = (
+/obj/machinery/power/apc/auto_name/directional/east{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 0
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/reception)
+"rn" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/tech,
+/area/ruin/unpowered/surveystation/techvault)
 "ro" = (
 /obj/item/pipe,
 /turf/open/floor/plating,
 /area/lavaland/surface)
 "se" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	icon_state = "blood2";
+	dir = 1
+	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "sg" = (
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "sJ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 5
@@ -447,14 +670,25 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
+"sT" = (
+/turf/closed/wall/r_wall,
+/area/ruin/unpowered/surveystation/servers)
+"sW" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/hallway)
 "tj" = (
 /obj/structure/table/wood,
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "tA" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/salvage_matter_bin,
@@ -463,26 +697,29 @@
 /obj/effect/spawner/lootdrop/salvage_capacitor,
 /obj/effect/spawner/lootdrop/salvage_scanning,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "tB" = (
 /obj/effect/decal/cleanable/greenglow,
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "tD" = (
 /obj/structure/chair,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "tP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "uc" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "ud" = (
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -492,7 +729,7 @@
 	dir = 9
 	},
 /turf/closed/wall/r_wall/rust,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "uI" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/fulltile,
@@ -500,36 +737,54 @@
 	id = "miscshutterstation"
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "uL" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
+"uN" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/hallway)
+"uS" = (
+/obj/structure/chair,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/reception)
 "uX" = (
 /obj/structure/bed,
 /obj/item/bedsheet/random,
 /obj/structure/curtain/cloth/grey,
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "uY" = (
 /obj/structure/table,
 /obj/machinery/chem_dispenser/drinks/beer{
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "uZ" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 4
+	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "vf" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "vo" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -539,8 +794,12 @@
 "vr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
+"vA" = (
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/director)
 "vX" = (
 /obj/structure/table/chem,
 /obj/item/reagent_containers/glass/bottle/synaptizine,
@@ -548,17 +807,20 @@
 	pixel_y = -28
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
+"wi" = (
+/turf/open/floor/plating,
+/area/ruin/unpowered/surveystation/power)
 "wk" = (
 /obj/structure/frame/machine{
 	anchored = 1
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "wo" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "wv" = (
 /obj/structure/chair/office/purple,
 /obj/effect/decal/cleanable/blood,
@@ -568,58 +830,79 @@
 /obj/effect/mob_spawn/human/scientist,
 /obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "wy" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 9
+	},
 /turf/open/floor/plating/rust,
 /area/lavaland/surface)
 "wD" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
+"wT" = (
+/turf/open/floor/plasteel/mono,
+/area/ruin/unpowered/surveystation/canteen)
 "wZ" = (
 /obj/machinery/photocopier,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "xP" = (
 /obj/structure/table/wood,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "xV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
+"yi" = (
+/turf/closed/wall/r_wall/rust,
+/area/ruin/unpowered/surveystation/director)
+"yl" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/hallway)
 "yu" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "yw" = (
 /obj/structure/chair/office,
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "yL" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "yR" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "yZ" = (
 /obj/effect/decal/cleanable/blood/gibs/limb,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "zd" = (
 /obj/structure/mirror{
 	pixel_x = 28
@@ -629,38 +912,64 @@
 	pixel_x = 11
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "ze" = (
 /obj/structure/grille,
 /obj/structure/window/fulltile,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "zg" = (
 /obj/structure/window/reinforced,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "zY" = (
 /obj/machinery/atmospherics/components/binary/pump/on,
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "Aq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/machinery/power/apc/auto_name/directional/west{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 0
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "Au" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/item/ammo_casing/spent,
+/obj/machinery/power/apc/auto_name/directional/north{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 40
+	},
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Ax" = (
 /obj/machinery/atmospherics/components/unary/passive_vent,
 /turf/open/floor/plating/airless,
 /area/lavaland/surface)
+"AA" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/reception)
 "AD" = (
 /obj/machinery/atmospherics/components/unary/passive_vent{
 	dir = 4
@@ -675,14 +984,20 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood/drip,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
+"Bv" = (
+/turf/closed/wall/r_wall,
+/area/ruin/unpowered/surveystation/power)
 "BB" = (
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "BT" = (
 /obj/item/pipe,
 /obj/item/pipe,
@@ -690,10 +1005,10 @@
 /area/lavaland/surface)
 "BY" = (
 /turf/closed/wall,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "Cd" = (
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "Ci" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 10
@@ -702,7 +1017,25 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
+"Cm" = (
+/obj/machinery/power/apc/auto_name/directional/east{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 0
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/director)
+"Cr" = (
+/obj/effect/gibspawner/generic,
+/turf/open/floor/plasteel/mono,
+/area/ruin/unpowered/surveystation/canteen)
 "Cu" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/hidden{
 	dir = 5
@@ -710,16 +1043,33 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	icon_state = "blood2";
+	dir = 1
+	},
+/obj/item/ammo_casing/spent,
+/obj/item/ammo_casing/spent,
+/obj/item/ammo_casing/spent,
+/obj/item/ammo_casing/spent,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "CC" = (
 /obj/structure/frame/machine,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "CP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
+"CS" = (
+/turf/closed/wall/r_wall/rust,
+/area/ruin/unpowered/surveystation/reception)
 "CW" = (
 /obj/structure/frame/computer{
 	anchored = 1
@@ -727,13 +1077,22 @@
 /obj/item/shard,
 /obj/item/shard,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "CZ" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 5
 	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
+"Df" = (
+/turf/open/floor/plasteel/tech,
+/area/ruin/unpowered/surveystation/researcharea)
+"Dr" = (
+/obj/machinery/atmospherics/components/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/reception)
 "DB" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -741,12 +1100,18 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "DZ" = (
 /obj/machinery/vending/snack/random,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
+"El" = (
+/turf/closed/wall,
+/area/ruin/unpowered/surveystation/dormitories)
 "Em" = (
 /obj/item/pipe,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -756,11 +1121,11 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "Ep" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "Ey" = (
 /obj/machinery/suit_storage_unit/inherit,
 /obj/item/clothing/suit/space/fragile,
@@ -768,7 +1133,10 @@
 /obj/item/clothing/head/helmet/space/fragile,
 /obj/item/tank/internals/oxygen,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
+"ER" = (
+/turf/open/floor/plasteel/tech/grid,
+/area/ruin/unpowered/surveystation/techvault)
 "Fo" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plating,
@@ -777,18 +1145,21 @@
 /obj/structure/chair{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "Fu" = (
 /obj/effect/decal/cleanable/oil/slippery,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Fv" = (
 /obj/structure/table,
 /obj/item/research_notes/loot/medium,
 /obj/item/research_notes/loot/small,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "Fy" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -796,30 +1167,38 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "FC" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "FT" = (
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "FY" = (
 /obj/structure/door_assembly/door_assembly_atmo{
 	anchored = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "Gu" = (
 /obj/item/ammo_casing/spent,
 /obj/item/ammo_casing/spent,
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "GR" = (
 /obj/machinery/door/airlock/vault/derelict,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -832,23 +1211,28 @@
 	dir = 4;
 	id = "vaultstation"
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "GY" = (
 /obj/structure/table,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "Hj" = (
-/obj/structure/sink{
-	dir = 4;
-	pixel_x = -12;
-	pixel_y = 2
+/obj/machinery/power/apc/auto_name/directional/north{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 0
 	},
-/obj/structure/mirror{
-	pixel_x = -28
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
 	},
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "Hk" = (
 /mob/living/simple_animal/hostile/asteroid/goliath/beast,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
@@ -858,7 +1242,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "HI" = (
 /obj/structure/door_assembly/door_assembly_vault{
 	anchored = 1
@@ -873,15 +1257,19 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "HV" = (
 /turf/open/floor/circuit,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "Ib" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "Iq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
@@ -889,18 +1277,27 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 6
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "Iu" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/salvage/gold,
 /obj/effect/spawner/lootdrop/salvage/silver,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "Iz" = (
 /obj/effect/spawner/lootdrop/maintenance/three,
 /turf/open/floor/plating,
 /area/lavaland/surface)
+"IC" = (
+/turf/closed/wall/r_wall/rust,
+/area/ruin/unpowered/surveystation/dormitories)
 "IE" = (
 /obj/effect/decal/cleanable/oil,
 /obj/structure/cable{
@@ -910,26 +1307,29 @@
 	icon_state = "1-4"
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "IJ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "IS" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Jr" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "Jx" = (
 /obj/structure/table/wood,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -937,24 +1337,30 @@
 	},
 /obj/effect/spawner/lootdrop/donut,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "JB" = (
 /obj/structure/table,
 /obj/machinery/microwave{
 	pixel_y = 6
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
+"JF" = (
+/turf/closed/wall/r_wall/rust,
+/area/ruin/unpowered/surveystation/virologyarea)
 "JS" = (
 /obj/machinery/power/smes,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "JY" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "Kn" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -964,25 +1370,25 @@
 	pixel_y = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "Ko" = (
 /obj/structure/table/chem,
 /obj/item/reagent_containers/glass/beaker,
 /obj/item/reagent_containers/glass/beaker,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "KE" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "KM" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "KV" = (
 /obj/machinery/door/airlock/science{
 	name = "Research"
@@ -992,32 +1398,64 @@
 	id = "miscshutterstation"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
+"KW" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plasteel/mono,
+/area/ruin/unpowered/surveystation/canteen)
+"Lk" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 4
+	},
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/director)
 "LA" = (
 /obj/structure/closet/l3closet/virology,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
+"LH" = (
+/turf/open/floor/plasteel/mono,
+/area/ruin/unpowered/surveystation/dormitories)
 "LU" = (
 /obj/structure/grille,
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "Mb" = (
 /obj/structure/closet/emcloset/anchored,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Mc" = (
 /obj/machinery/light/directional/north,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "Mf" = (
 /obj/structure/bed,
 /obj/item/bedsheet/random,
 /obj/structure/curtain/cloth/grey,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
+"ME" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/reception)
+"MH" = (
+/turf/closed/wall/r_wall,
+/area/ruin/unpowered/surveystation/director)
 "MQ" = (
 /obj/machinery/atmospherics/components/binary/pump/on/layer4{
 	dir = 1
@@ -1026,7 +1464,7 @@
 /obj/machinery/door/window/northleft,
 /obj/machinery/door/window/southright,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "Nd" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
@@ -1034,14 +1472,23 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 9
 	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
+"Nr" = (
+/turf/open/floor/plasteel/mono,
+/area/ruin/unpowered/surveystation/researcharea)
+"Nt" = (
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/reception)
 "NF" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/salvage/bluespace,
 /obj/effect/spawner/lootdrop/salvage/bluespace,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "NK" = (
 /obj/machinery/button/door{
 	pixel_x = -24;
@@ -1049,8 +1496,9 @@
 	id = "miscshutterstation";
 	name = "Lockdown"
 	},
+/obj/structure/closet/firecloset/full,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "NR" = (
 /turf/template_noop,
 /area/template_noop)
@@ -1058,65 +1506,92 @@
 /obj/machinery/light/directional/west,
 /obj/structure/filingcabinet/double/grey,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "Oe" = (
 /obj/machinery/door/airlock/science{
 	name = "Server Room"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/mapping_helpers/airlock/abandoned,
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	icon_state = "blood2";
+	dir = 1
+	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "Ok" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
+"Oo" = (
+/obj/structure/table,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/director)
 "Or" = (
 /obj/structure/rack,
 /obj/item/circuitboard/machine/telecomms/relay,
 /obj/item/circuitboard/machine/telecomms/server,
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "Os" = (
 /obj/structure/chair/office/light{
 	dir = 8
 	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "Ot" = (
 /obj/effect/decal/cleanable/generic,
+/obj/machinery/power/apc/auto_name/directional/north{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 40
+	},
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "OJ" = (
 /obj/machinery/light/directional/north,
 /obj/effect/gibspawner/human,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Pb" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "Pw" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Dormitories"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "PB" = (
 /obj/structure/closet/firecloset/full,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "PE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "PN" = (
 /turf/open/floor/plating,
 /area/lavaland/surface)
@@ -1125,33 +1600,48 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "QF" = (
 /obj/machinery/door/airlock/external{
 	req_access_txt = "150";
 	dir = 8
 	},
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "QG" = (
 /obj/machinery/vending/wardrobe/viro_wardrobe,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "QH" = (
 /obj/machinery/autolathe,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
+"QI" = (
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/dormitories)
 "QM" = (
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "QP" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "QQ" = (
 /obj/structure/closet/firecloset/full,
 /obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
+"Re" = (
+/turf/closed/wall,
+/area/ruin/unpowered/surveystation/canteen)
+"Rj" = (
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 8
+	},
+/turf/open/floor/plasteel/mono/white,
+/area/ruin/unpowered/surveystation/director)
 "Rr" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 1
@@ -1159,32 +1649,49 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Rw" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/aimodule_harmless,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "RH" = (
 /obj/structure/chair{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
+"RO" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/reception)
 "RW" = (
 /obj/machinery/atmospherics/components/unary/passive_vent{
 	dir = 4
 	},
 /turf/open/floor/plating,
 /area/lavaland/surface)
+"Sf" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plasteel/mono,
+/area/ruin/unpowered/surveystation/dormitories)
 "Sh" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/random_prosthetic,
 /obj/effect/spawner/lootdrop/random_prosthetic,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "Sm" = (
 /obj/machinery/door/airlock/virology{
 	frequency = 1449;
@@ -1194,26 +1701,29 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/locked,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "Sp" = (
 /obj/effect/gibspawner/robot,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Sr" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 6
 	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "Ss" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Su" = (
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "SD" = (
 /obj/structure/table,
 /obj/machinery/button/door{
@@ -1229,14 +1739,14 @@
 	id = "vaultstation"
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "SW" = (
 /obj/structure/curtain,
 /obj/machinery/shower{
 	dir = 1
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "Td" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plating,
@@ -1246,13 +1756,13 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "TL" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/donut,
 /obj/effect/spawner/lootdrop/donut,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/canteen)
 "TX" = (
 /obj/structure/table,
 /obj/item/stamp/rd{
@@ -1268,36 +1778,44 @@
 	pixel_x = 7
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "TZ" = (
 /obj/effect/gibspawner/generic,
 /obj/effect/decal/cleanable/blood,
 /obj/item/ammo_casing/spent,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
+"Ul" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/hallway)
 "UQ" = (
 /obj/structure/table,
 /obj/item/taperecorder/empty,
 /obj/item/tape,
 /obj/item/tape,
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "Vk" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 6
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Vp" = (
 /obj/machinery/atmospherics/pipe/layer_manifold,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/mob_spawn/human/engineer,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/servers)
 "Vx" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "VN" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 1
@@ -1305,15 +1823,21 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "VP" = (
 /obj/structure/rack,
 /obj/item/circuitboard/computer/crew,
 /obj/item/circuitboard/machine/mechfab,
 /obj/item/circuitboard/machine/space_heater,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "VT" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
@@ -1322,16 +1846,19 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "Wi" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
 /turf/open/floor/plasteel/tech,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "Wu" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/techvault)
 "WC" = (
 /obj/structure/table,
 /obj/item/paper_bin/carbon{
@@ -1341,7 +1868,7 @@
 	pixel_y = 4
 	},
 /turf/open/floor/plasteel,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "WE" = (
 /obj/structure/window/reinforced/fulltile,
 /obj/structure/grille,
@@ -1349,23 +1876,26 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
+"Xd" = (
+/turf/closed/wall/r_wall,
+/area/ruin/unpowered/surveystation/canteen)
 "Xm" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/ammo_casing/spent,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/hallway)
 "Xr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /obj/effect/decal/cleanable/xenoblood/xsplatter,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
 "XD" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
 /turf/closed/wall/r_wall,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/reception)
 "XI" = (
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/template_noop)
@@ -1375,16 +1905,23 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "Ye" = (
 /obj/machinery/power/port_gen,
 /obj/structure/cable,
 /turf/open/floor/plating,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/power)
 "Yj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
+"Yq" = (
+/obj/effect/decal/cleanable/blood/footprints{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/drip,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/hallway)
 "Yr" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -1394,29 +1931,45 @@
 	pixel_y = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
 "Yw" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/plating,
 /area/lavaland/surface)
 "YL" = (
 /obj/effect/gibspawner/generic,
+/obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/researcharea)
 "YX" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plasteel/mono,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/dormitories)
 "Zb" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on{
 	dir = 1
 	},
 /turf/open/floor/plasteel/tech/grid,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/virologyarea)
+"ZH" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 8
+	},
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered/surveystation/director)
 "ZO" = (
 /obj/structure/filingcabinet/double,
 /turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/area/ruin/unpowered/surveystation/director)
+"ZR" = (
+/obj/machinery/power/apc/auto_name/directional/south{
+	cell_type = /obj/item/stock_parts/cell/empty;
+	start_charge = 0
+	},
+/obj/machinery/power/terminal,
+/obj/structure/cable,
+/turf/open/floor/plasteel/mono,
+/area/ruin/unpowered/surveystation/canteen)
 
 (1,1,1) = {"
 NR
@@ -1663,11 +2216,11 @@ NR
 XI
 XI
 XI
-mI
+nk
 XD
 QF
 XD
-mI
+nk
 XI
 XI
 NR
@@ -1696,11 +2249,11 @@ NR
 NR
 XI
 XI
-mI
+nk
 jS
 Cd
 jK
-mI
+nk
 XI
 XI
 NR
@@ -1729,11 +2282,11 @@ NR
 NR
 NR
 XI
-mI
+nk
 FC
 yu
 yL
-mI
+nk
 XI
 NR
 NR
@@ -1760,15 +2313,15 @@ NR
 NR
 NR
 NR
-mI
-pA
-mI
-mI
+nk
+CS
+nk
+nk
 mb
-mI
-pA
-pA
-mI
+nk
+CS
+CS
+nk
 NR
 NR
 NR
@@ -1793,15 +2346,15 @@ NR
 NR
 NR
 NR
-mI
-tD
-Su
+nk
+uS
+Nt
 iR
 Pb
-Su
-Su
-mf
-mI
+Nt
+Nt
+AA
+nk
 NR
 NR
 NR
@@ -1826,15 +2379,15 @@ NR
 NR
 NR
 NR
-mI
-tD
-Su
+nk
+uS
+Nt
 iR
 Pb
-Su
+Nt
 iR
-mf
-mI
+AA
+nk
 NR
 NR
 NR
@@ -1859,15 +2412,15 @@ NR
 NR
 NR
 NR
-mI
-tD
-Su
-KM
+nk
+uS
+Nt
+Dr
 Pb
-Su
-Su
-mf
-mI
+Nt
+Nt
+AA
+nk
 NR
 NR
 NR
@@ -1892,15 +2445,15 @@ NR
 NR
 NR
 NR
-pA
-Ok
-Su
+CS
+RO
+Nt
 Eo
 Sr
 Vx
-Su
+Nt
 QQ
-mI
+nk
 NR
 NR
 NR
@@ -1925,15 +2478,15 @@ NR
 NR
 NR
 NR
-pA
+CS
 mZ
 Kn
 GY
 VT
-Su
-Su
-mf
-pA
+Nt
+Nt
+AA
+CS
 NR
 NR
 NR
@@ -1958,15 +2511,15 @@ NR
 NR
 NR
 NR
-pA
-sg
+CS
+hS
 yw
 GY
 VT
-Su
-Su
-mf
-pA
+Nt
+Nt
+AA
+CS
 NR
 NR
 NR
@@ -1991,15 +2544,15 @@ NR
 NR
 NR
 NR
-pA
-sg
-sg
-sg
-VT
-Su
+CS
+hS
+hS
+rl
+ME
+Nt
 vf
-mf
-mI
+AA
+nk
 NR
 NR
 NR
@@ -2024,15 +2577,15 @@ NR
 NR
 NR
 NR
-mI
-mI
-mI
-mI
+nk
+nk
+nk
+nk
 HI
-pA
-mI
-mI
-mI
+CS
+nk
+nk
+nk
 NR
 NR
 NR
@@ -2053,23 +2606,23 @@ NR
 NR
 NR
 NR
-mI
-mI
-mI
-mI
-mI
-BY
-BY
-iR
+ai
+ai
+ai
+ai
+ai
+ek
+ek
+gy
 AY
 Mb
-BY
-BY
-mI
-mI
-pA
-mI
-mI
+Re
+Re
+Xd
+Xd
+ra
+Xd
+Xd
 NR
 NR
 NR
@@ -2094,15 +2647,15 @@ NU
 NK
 uI
 Su
-VT
+yl
 Su
-BY
+Re
 uY
 fR
-YX
+KW
 DZ
 pF
-mI
+Xd
 NR
 NR
 NR
@@ -2122,20 +2675,20 @@ NR
 pA
 wZ
 Os
-QP
-QP
+Nr
+Nr
 uL
-BY
+ek
 Ok
 Fy
 pq
 nQ
 CZ
-QP
+wT
 FT
-QP
-QP
-mI
+wT
+wT
+Xd
 NR
 NR
 NR
@@ -2152,23 +2705,23 @@ NR
 NR
 NR
 NR
-mI
+ai
 kc
 hg
 iN
-QP
+Nr
 gz
-BY
+ek
 Sp
 AY
 Hz
-BY
+Re
 Jx
 mf
-QP
+wT
 tD
 xP
-mI
+Xd
 NR
 NR
 NR
@@ -2185,10 +2738,10 @@ NR
 NR
 NR
 NR
-mI
+ai
 tB
-QM
-QP
+Df
+Nr
 YL
 jh
 KV
@@ -2198,10 +2751,10 @@ Su
 LU
 TL
 mf
-QP
+wT
 tD
 xP
-mI
+Xd
 NR
 NR
 NR
@@ -2218,23 +2771,23 @@ NR
 NR
 NR
 NR
-mI
+ai
 wk
 ph
 QH
 hJ
 kf
-BY
+ek
 CP
 cX
 Fu
 ze
 xP
 mf
-QP
+wT
 tD
 xP
-pA
+ra
 NR
 NR
 NR
@@ -2251,23 +2804,23 @@ NR
 NR
 NR
 NR
-mI
-BY
-BY
-BY
-BY
-BY
-BY
+ai
+ek
+ek
+ek
+ek
+ek
+ek
 Su
-VT
+yl
 Sp
 ze
 xP
 mf
-YL
+Cr
 tD
 xP
-pA
+ra
 NR
 NR
 NR
@@ -2284,23 +2837,23 @@ NR
 NR
 NR
 NR
-mI
+sT
 dl
 KE
-BY
+pm
 Ey
 Aq
-BY
+pm
 Su
-VT
+yl
 IS
-BY
+Re
 tj
 mf
-QP
+wT
 tD
 xP
-mI
+Xd
 NR
 NR
 NR
@@ -2317,7 +2870,7 @@ NR
 NR
 NR
 NR
-mI
+sT
 pB
 Ci
 MQ
@@ -2329,11 +2882,11 @@ gK
 PE
 le
 IJ
-iN
+kg
 QP
 QP
-QP
-mI
+ZR
+Xd
 NR
 NR
 NR
@@ -2350,23 +2903,23 @@ NR
 NR
 NR
 NR
-pA
+oZ
 dl
 Jr
-BY
+pm
 wD
 Ti
-BY
+pm
 OJ
-VT
+yl
 Qt
-BY
+Re
 JB
 bQ
 wo
 mC
 gt
-mI
+Xd
 NR
 XI
 XI
@@ -2383,23 +2936,23 @@ NR
 NR
 NR
 NR
-pA
-mI
-mI
-mI
-pA
-mI
-mI
+oH
+ja
+ja
+ja
+oH
+ja
+ja
 Su
-VT
+yl
 yZ
-BY
-BY
-BY
-BY
-BY
-mI
-mI
+Re
+Re
+Re
+Re
+Re
+Xd
+Xd
 XI
 XI
 Yw
@@ -2416,22 +2969,22 @@ NR
 NR
 NR
 NR
-mI
+ja
 HV
 eE
 Or
 zg
 HV
-mI
+ja
 Au
-VT
+oM
 TZ
 BY
 JS
 px
 IE
 Ye
-pA
+nu
 XI
 XI
 Iz
@@ -2449,22 +3002,22 @@ NR
 NR
 NR
 NR
-mI
+ja
 nw
 Ep
 sJ
 qB
 nw
-pA
+oH
 Vk
 je
-Su
+qX
 BY
 jV
-Cd
+wi
 BB
 Ye
-pA
+nu
 XI
 PN
 PN
@@ -2482,13 +3035,13 @@ NR
 NR
 NR
 NR
-mI
+ja
 do
 tA
 rj
 Rw
 NF
-pA
+oH
 Hz
 VN
 uZ
@@ -2515,15 +3068,15 @@ NR
 NR
 NR
 NR
-pA
-Wu
-Wu
+oH
+ER
+ER
 bv
 Wu
-Wu
-mI
+iI
+ja
 Xm
-VT
+yl
 hV
 BY
 Ot
@@ -2541,29 +3094,29 @@ PN
 XI
 "}
 (35,1,1) = {"
-mI
-mI
+MH
+MH
 WE
 WE
-mI
-pA
-pA
-mI
+MH
+yi
+yi
+ja
 VP
 qc
-bv
+rn
 Sh
 Iu
-mI
+ja
 Su
-VT
+yl
 Gu
 BY
 BY
 BY
 BY
 BY
-mI
+Bv
 XI
 XI
 XI
@@ -2574,29 +3127,29 @@ dW
 PN
 "}
 (36,1,1) = {"
-mI
+MH
 eV
-sg
-sg
-sg
-sg
-Su
-mI
-mI
-pA
+vA
+vA
+vA
+vA
+eN
+ja
+ja
+oH
 GR
-mI
-mI
-mI
+ja
+ja
+ja
 oK
 AY
-Su
-BY
+dQ
+El
 Hj
 pa
 YX
 uX
-mI
+aB
 XI
 XI
 kL
@@ -2607,29 +3160,29 @@ XI
 XI
 "}
 (37,1,1) = {"
-pA
+yi
 ZO
-sg
+vA
 fI
 SD
-sg
+vA
 KM
-BY
+cI
 Mb
 Ss
 DB
 Su
 Su
 Sp
-Su
+Yq
 Rr
-vr
+sW
 Pw
 uc
 XJ
 tP
 uX
-mI
+aB
 NR
 XI
 XI
@@ -2640,29 +3193,29 @@ XI
 NR
 "}
 (38,1,1) = {"
-mI
+MH
 Mc
-sg
+vA
 wv
 TX
 Fp
 Iq
 ia
 mm
-mm
+bp
 qK
 mm
 mm
-mm
-mm
+uN
+uN
 Nd
 Su
-BY
+El
 Mf
-QP
-QP
+LH
+LH
 Mf
-mI
+aB
 NR
 NR
 NR
@@ -2673,16 +3226,16 @@ NR
 NR
 "}
 (39,1,1) = {"
-pA
+yi
 CW
-sg
+Rj
 Yr
-GY
-sg
-Hz
-BY
+Oo
+Lk
+ZH
+cI
 PB
-Su
+Ul
 yR
 Su
 Su
@@ -2690,12 +3243,12 @@ Su
 Ss
 Su
 Sp
-BY
+El
 uX
-QP
-QP
+LH
+LH
 Mf
-mI
+aB
 NR
 NR
 NR
@@ -2706,29 +3259,29 @@ NR
 NR
 "}
 (40,1,1) = {"
-pA
+yi
 cK
+vA
 sg
 sg
-sg
-sg
-Su
-mI
+Cm
+eN
+MH
 mI
 Sm
 mI
 mI
 mI
 mI
-pA
+JF
 mI
 mI
-pA
+IC
 Mf
-QP
-QP
+LH
+LH
 Mf
-pA
+IC
 NR
 NR
 NR
@@ -2739,29 +3292,29 @@ NR
 NR
 "}
 (41,1,1) = {"
-mI
-mI
+MH
+MH
 WE
 WE
-pA
+yi
+MH
+MH
+yi
 mI
-mI
-pA
-mI
-QM
+cd
 LA
 mI
 QG
 kd
 pS
-Wu
+iJ
 Ko
-pA
+IC
 Mf
-QP
-wo
+LH
+Sf
 Mf
-pA
+IC
 NR
 NR
 NR
@@ -2789,12 +3342,12 @@ Wi
 QM
 jH
 vX
-mI
-BY
+aB
+El
 jz
-BY
-BY
-pA
+El
+El
+IC
 NR
 NR
 NR
@@ -2815,19 +3368,19 @@ NR
 NR
 mI
 av
-Wu
+iJ
 mI
-Wu
+iJ
 QM
 QM
 QM
 ld
-mI
+aB
 zd
-Su
+QI
 SW
-mI
-mI
+aB
+aB
 NR
 NR
 NR
@@ -2846,20 +3399,20 @@ NR
 NR
 NR
 NR
-pA
-pA
-pA
+JF
+JF
+JF
 mR
 RH
 RH
 Xr
 Zb
 CC
-mI
-mI
-pA
-mI
-mI
+aB
+aB
+IC
+aB
+aB
 NR
 NR
 NR
@@ -2887,7 +3440,7 @@ mI
 mI
 mI
 mI
-pA
+JF
 mI
 NR
 NR

@@ -121,30 +121,40 @@
 
 /area/ruin/unpowered/surveystation/hallway
 	name = "Outpost Hallway"
+	icon_state = "unexplored"
 
 /area/ruin/unpowered/surveystation/reception
 	name = "Outpost Reception"
+	icon_state = "unexplored"
 
 /area/ruin/unpowered/surveystation/canteen
 	name = "Outpost Canteen"
+	icon_state = "unexplored"
 
 /area/ruin/unpowered/surveystation/dormitories
 	name = "Outpost Dorms"
+	icon_state = "unexplored"
 
 /area/ruin/unpowered/surveystation/researcharea
 	name = "Research Center"
+	icon_state = "unexplored"
 
 /area/ruin/unpowered/surveystation/servers
 	name = "Server Room"
+	icon_state = "unexplored"
 
 /area/ruin/unpowered/surveystation/power
 	name = "Outpost Maintenance"
+	icon_state = "unexplored"
 
 /area/ruin/unpowered/surveystation/techvault
 	name = "Outpost Vault"
+	icon_state = "unexplored"
 
 /area/ruin/unpowered/surveystation/virologyarea
 	name = "Virological Research Area"
+	icon_state = "unexplored"
 
 /area/ruin/unpowered/surveystation/director
 	name = "Director's Office"
+	icon_state = "unexplored"
