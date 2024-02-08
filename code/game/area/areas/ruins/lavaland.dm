@@ -116,3 +116,35 @@
 	name = "Pinnace Wreckage"
 	icon_state = "dk_yellow"
 	always_unpowered = TRUE
+
+// Abandoned Survey Station
+
+/area/ruin/unpowered/surveystation/hallway
+	name = "Outpost Hallway"
+
+/area/ruin/unpowered/surveystation/reception
+	name = "Outpost Reception"
+
+/area/ruin/unpowered/surveystation/canteen
+	name = "Outpost Canteen"
+
+/area/ruin/unpowered/surveystation/dormitories
+	name = "Outpost Dorms"
+
+/area/ruin/unpowered/surveystation/researcharea
+	name = "Research Center"
+
+/area/ruin/unpowered/surveystation/servers
+	name = "Server Room"
+
+/area/ruin/unpowered/surveystation/power
+	name = "Outpost Maintenance"
+
+/area/ruin/unpowered/surveystation/techvault
+	name = "Outpost Vault"
+
+/area/ruin/unpowered/surveystation/virologyarea
+	name = "Virological Research Area"
+
+/area/ruin/unpowered/surveystation/director
+	name = "Director's Office"
