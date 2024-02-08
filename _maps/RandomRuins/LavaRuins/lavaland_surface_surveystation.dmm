@@ -3,7 +3,9 @@
 /obj/machinery/atmospherics/components/unary/portables_connector{
 	dir = 8
 	},
-/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/portable_atmospherics/canister/air{
+	anchored = 1
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered)
 "bv" = (
@@ -26,7 +28,10 @@
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered)
 "cK" = (
-/obj/structure/displaycase/noalert,
+/obj/structure/frame/computer{
+	anchored = 1
+	},
+/obj/item/shard,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "cX" = (
@@ -50,18 +55,17 @@
 /area/ruin/unpowered)
 "dJ" = (
 /obj/item/pipe_meter,
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "dW" = (
 /obj/effect/spawner/lootdrop/maintenance,
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "eE" = (
 /obj/structure/window/reinforced{
 	dir = 1;
 	pixel_y = 1
 	},
-/obj/effect/spawner/lootdrop/crate_spawner,
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered)
 "eV" = (
@@ -86,13 +90,13 @@
 /area/ruin/unpowered)
 "eZ" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering";
+	name = "Maintenance";
 	req_access_txt = "150"
 	},
 /obj/effect/mapping_helpers/airlock/locked,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "fu" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden,
@@ -105,8 +109,8 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "fK" = (
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating/rust,
+/area/lavaland/surface)
 "fR" = (
 /obj/structure/table,
 /obj/machinery/chem_dispenser/drinks{
@@ -187,7 +191,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "jz" = (
 /obj/machinery/door/airlock{
@@ -204,7 +208,7 @@
 /obj/machinery/atmospherics/components/binary/dp_vent_pump{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "jS" = (
 /obj/machinery/advanced_airlock_controller{
@@ -213,14 +217,14 @@
 /obj/machinery/atmospherics/components/binary/dp_vent_pump{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "jV" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/insectguts,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "kc" = (
 /obj/machinery/computer/rdconsole/core{
@@ -243,18 +247,18 @@
 /area/ruin/unpowered)
 "kL" = (
 /obj/machinery/portable_atmospherics/scrubber,
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "ld" = (
 /obj/structure/table/chem,
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered)
 "le" = (
-/obj/machinery/door/airlock/public/glass{
-	name = "Bar"
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/obj/machinery/door/airlock/public/glass{
+	name = "Canteen"
+	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/unpowered)
 "lv" = (
@@ -300,8 +304,8 @@
 /area/ruin/unpowered)
 "mZ" = (
 /obj/structure/table,
-/obj/item/camera,
 /obj/item/camera_film,
+/obj/item/camera,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "nh" = (
@@ -312,12 +316,12 @@
 	},
 /obj/item/storage/toolbox/mechanical,
 /obj/effect/spawner/lootdrop/maintenance/two,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "nq" = (
 /obj/machinery/light/small/directional/east,
 /obj/effect/decal/cleanable/oil/streak,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "nw" = (
 /obj/structure/window/reinforced{
@@ -327,7 +331,7 @@
 /area/ruin/unpowered)
 "nQ" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Bar"
+	name = "Canteen"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/effect/mapping_helpers/airlock/abandoned,
@@ -369,7 +373,10 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/turf/open/floor/plating/airless,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "pA" = (
 /turf/closed/wall/r_wall/rust,
@@ -423,14 +430,13 @@
 /area/ruin/unpowered)
 "ro" = (
 /obj/item/pipe,
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "se" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "sg" = (
-/obj/effect/gibspawner/human/bodypartless,
 /turf/open/floor/plasteel/mono/white,
 /area/ruin/unpowered)
 "sJ" = (
@@ -451,7 +457,11 @@
 /area/ruin/unpowered)
 "tA" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/stockparts,
+/obj/effect/spawner/lootdrop/salvage_matter_bin,
+/obj/effect/spawner/lootdrop/salvage_matter_bin,
+/obj/effect/spawner/lootdrop/salvage_manipulator,
+/obj/effect/spawner/lootdrop/salvage_capacitor,
+/obj/effect/spawner/lootdrop/salvage_scanning,
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered)
 "tB" = (
@@ -485,8 +495,10 @@
 /area/ruin/unpowered)
 "uI" = (
 /obj/structure/grille,
-/obj/machinery/door/poddoor/shutters/preopen,
 /obj/structure/window/reinforced/fulltile,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "miscshutterstation"
+	},
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "uL" = (
@@ -522,8 +534,8 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "vr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
@@ -549,17 +561,18 @@
 /area/ruin/unpowered)
 "wv" = (
 /obj/structure/chair/office/purple,
-/obj/effect/mapping_helpers/dead_body_placer,
 /obj/effect/decal/cleanable/blood,
-/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
 /obj/item/ammo_casing/spent{
 	pixel_x = 7
 	},
+/obj/effect/mob_spawn/human/scientist,
+/obj/item/gun/ballistic/automatic/pistol/m1911/no_mag,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "wy" = (
-/turf/open/floor/plasteel/mono/white,
-/area/ruin/unpowered)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden,
+/turf/open/floor/plating/rust,
+/area/lavaland/surface)
 "wD" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plasteel,
@@ -577,13 +590,13 @@
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "yu" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "yw" = (
 /obj/structure/chair/office,
@@ -593,7 +606,8 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 9
 	},
-/turf/open/floor/plating/airless,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "yR" = (
 /obj/machinery/light/directional/east,
@@ -651,7 +665,7 @@
 /obj/machinery/atmospherics/components/unary/passive_vent{
 	dir = 4
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating/rust,
 /area/lavaland/surface)
 "AY" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -663,16 +677,22 @@
 /obj/effect/decal/cleanable/blood/drip,
 /turf/open/floor/plasteel/mono/white,
 /area/ruin/unpowered)
+"BB" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plating,
+/area/ruin/unpowered)
 "BT" = (
 /obj/item/pipe,
 /obj/item/pipe,
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "BY" = (
 /turf/closed/wall,
 /area/ruin/unpowered)
 "Cd" = (
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "Ci" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
@@ -698,6 +718,14 @@
 /area/ruin/unpowered)
 "CP" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered)
+"CW" = (
+/obj/structure/frame/computer{
+	anchored = 1
+	},
+/obj/item/shard,
+/obj/item/shard,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "CZ" = (
@@ -743,8 +771,8 @@
 /area/ruin/unpowered)
 "Fo" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "Fp" = (
 /obj/structure/chair{
 	dir = 1
@@ -774,7 +802,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 10
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "FT" = (
 /obj/effect/decal/cleanable/oil,
@@ -785,7 +813,7 @@
 	anchored = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "Gu" = (
 /obj/item/ammo_casing/spent,
@@ -801,7 +829,8 @@
 	dir = 4
 	},
 /obj/machinery/door/poddoor/shutters{
-	dir = 4
+	dir = 4;
+	id = "vaultstation"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered)
@@ -851,7 +880,7 @@
 /area/ruin/unpowered)
 "Ib" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "Iq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -870,11 +899,17 @@
 /area/ruin/unpowered)
 "Iz" = (
 /obj/effect/spawner/lootdrop/maintenance/three,
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "IE" = (
 /obj/effect/decal/cleanable/oil,
-/turf/open/floor/plating/airless,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "IJ" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
@@ -912,13 +947,13 @@
 /area/ruin/unpowered)
 "JS" = (
 /obj/machinery/power/smes,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "JY" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "Kn" = (
 /obj/structure/table,
@@ -953,7 +988,9 @@
 	name = "Research"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
-/obj/machinery/door/poddoor/shutters/preopen,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "miscshutterstation"
+	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel/mono,
 /area/ruin/unpowered)
@@ -1006,7 +1043,12 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered)
 "NK" = (
-/obj/effect/gibspawner/generic,
+/obj/machinery/button/door{
+	pixel_x = -24;
+	dir = 4;
+	id = "miscshutterstation";
+	name = "Lockdown"
+	},
 /turf/open/floor/plasteel,
 /area/ruin/unpowered)
 "NR" = (
@@ -1031,7 +1073,8 @@
 /area/ruin/unpowered)
 "Or" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/tcomms,
+/obj/item/circuitboard/machine/telecomms/relay,
+/obj/item/circuitboard/machine/telecomms/server,
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered)
 "Os" = (
@@ -1042,7 +1085,7 @@
 /area/ruin/unpowered)
 "Ot" = (
 /obj/effect/decal/cleanable/generic,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "OJ" = (
 /obj/machinery/light/directional/north,
@@ -1063,6 +1106,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel/mono,
 /area/ruin/unpowered)
+"PB" = (
+/obj/structure/closet/firecloset/full,
+/turf/open/floor/plasteel/white,
+/area/ruin/unpowered)
 "PE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/decal/cleanable/blood/tracks{
@@ -1071,11 +1118,8 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "PN" = (
-/obj/item/ammo_box/magazine/m45{
-	ammo_type = null
-	},
-/turf/open/floor/plasteel/white,
-/area/ruin/unpowered)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "Qt" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -1087,7 +1131,7 @@
 	req_access_txt = "150";
 	dir = 8
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "QG" = (
 /obj/machinery/vending/wardrobe/viro_wardrobe,
@@ -1105,6 +1149,7 @@
 /area/ruin/unpowered)
 "QQ" = (
 /obj/structure/closet/firecloset/full,
+/obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered)
 "Rr" = (
@@ -1128,6 +1173,12 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden,
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered)
+"RW" = (
+/obj/machinery/atmospherics/components/unary/passive_vent{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "Sh" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/random_prosthetic,
@@ -1188,10 +1239,12 @@
 /area/ruin/unpowered)
 "Td" = (
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/open/floor/plating/airless,
-/area/template_noop)
+/turf/open/floor/plating,
+/area/lavaland/surface)
 "Ti" = (
-/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on/coldroom,
+/obj/machinery/atmospherics/components/unary/thermomachine/freezer/on/coldroom{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/ruin/unpowered)
 "TL" = (
@@ -1256,8 +1309,9 @@
 /area/ruin/unpowered)
 "VP" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/techstorage/service,
-/obj/effect/spawner/lootdrop/techstorage/service,
+/obj/item/circuitboard/computer/crew,
+/obj/item/circuitboard/machine/mechfab,
+/obj/item/circuitboard/machine/space_heater,
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered)
 "VT" = (
@@ -1324,7 +1378,8 @@
 /area/ruin/unpowered)
 "Ye" = (
 /obj/machinery/power/port_gen,
-/turf/open/floor/plating/airless,
+/obj/structure/cable,
+/turf/open/floor/plating,
 /area/ruin/unpowered)
 "Yj" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
@@ -1342,11 +1397,12 @@
 /area/ruin/unpowered)
 "Yw" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/open/floor/plating/airless,
-/area/template_noop)
-"YL" = (
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/lavaland/surface)
+"YL" = (
+/obj/effect/gibspawner/generic,
+/turf/open/floor/plasteel/mono,
+/area/ruin/unpowered)
 "YX" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plasteel/mono,
@@ -1575,8 +1631,8 @@ XI
 XI
 XI
 XI
-AD
-YL
+RW
+XI
 AD
 XI
 XI
@@ -1837,7 +1893,7 @@ NR
 NR
 NR
 pA
-Su
+Ok
 Su
 Eo
 Sr
@@ -1903,7 +1959,7 @@ NR
 NR
 NR
 pA
-wy
+sg
 yw
 GY
 VT
@@ -1936,9 +1992,9 @@ NR
 NR
 NR
 pA
-wy
-wy
-wy
+sg
+sg
+sg
 VT
 Su
 vf
@@ -2133,7 +2189,7 @@ mI
 tB
 QM
 QP
-QP
+YL
 jh
 KV
 vr
@@ -2208,7 +2264,7 @@ Sp
 ze
 xP
 mf
-QP
+YL
 tD
 xP
 pA
@@ -2382,7 +2438,7 @@ Iz
 fK
 fK
 dJ
-fK
+PN
 XI
 "}
 (32,1,1) = {"
@@ -2406,14 +2462,14 @@ Su
 BY
 jV
 Cd
-Cd
+BB
 Ye
 pA
 XI
-fK
-fK
-fK
-fK
+PN
+PN
+PN
+PN
 BT
 XI
 XI
@@ -2442,7 +2498,7 @@ xV
 Ib
 Ib
 FY
-Fo
+wy
 Em
 Fo
 XI
@@ -2476,12 +2532,12 @@ nq
 nh
 cs
 XI
-fK
+PN
 ri
 XI
 vo
 XI
-fK
+PN
 XI
 "}
 (35,1,1) = {"
@@ -2499,7 +2555,7 @@ bv
 Sh
 Iu
 mI
-PN
+Su
 VT
 Gu
 BY
@@ -2513,17 +2569,17 @@ XI
 XI
 XI
 fK
-fK
+PN
 dW
-fK
+PN
 "}
 (36,1,1) = {"
 mI
 eV
-wy
-wy
-wy
-wy
+sg
+sg
+sg
+sg
 Su
 mI
 mI
@@ -2544,7 +2600,7 @@ mI
 XI
 XI
 kL
-fK
+PN
 ro
 XI
 XI
@@ -2553,10 +2609,10 @@ XI
 (37,1,1) = {"
 pA
 ZO
-wy
+sg
 fI
 SD
-wy
+sg
 KM
 BY
 Mb
@@ -2586,7 +2642,7 @@ NR
 (38,1,1) = {"
 mI
 Mc
-wy
+sg
 wv
 TX
 Fp
@@ -2618,14 +2674,14 @@ NR
 "}
 (39,1,1) = {"
 pA
-Su
-wy
+CW
+sg
 Yr
 GY
-wy
+sg
 Hz
 BY
-QQ
+PB
 Su
 yR
 Su
@@ -2652,10 +2708,10 @@ NR
 (40,1,1) = {"
 pA
 cK
-wy
 sg
-wy
-wy
+sg
+sg
+sg
 Su
 mI
 mI
